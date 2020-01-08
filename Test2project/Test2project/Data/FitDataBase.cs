@@ -15,7 +15,7 @@ namespace FitDataBase.Data
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Fit>().Wait();
         }
-
+        //
         //public Task<List<FitDatabase>> GetFitAsync()
         //{
         //    return _database.Table<Fit>().ToListAsync();
