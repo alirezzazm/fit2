@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Test2project.Main.Messages"
+             Title="Messages">
+    <ScrollView>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="30,30,0,0">
+                
+                <Image Source="a.png"
+                       HeightRequest="50"
+                       WidthRequest="50"/>
+                <Label
+                 Margin="0,25"   
+                Text="ali"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    
+                />
+                <Label
+                    HorizontalOptions="EndAndExpand"
+                    Margin="25"
+                    Text="HI,how are you?"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="30,0">
+
+                <Image Source="b.png"
+                       HeightRequest="50"
+                       WidthRequest="50"/>
+                <Label
+                 Margin="0,25"   
+                Text="mohamad"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    
+                />
+                <Label
+                    HorizontalOptions="EndAndExpand"
+                    Margin="25"
+                    Text="good by!"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="30,0">
+
+                <Image Source="c.png"
+                       HeightRequest="50"
+                       WidthRequest="50"/>
+                <Label
+                 Margin="0,25"   
+                Text="ayda"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    
+                />
+                <Label
+                    HorizontalOptions="EndAndExpand"
+                    Margin="25"
+                    Text="whats?!"/>
+            </StackLayout>
+             <StackLayout Orientation="Horizontal" Margin="30,0">
+                
+                <Image Source="f.png"
+                       HeightRequest="50"
+                       WidthRequest="50"/>
+                <Label
+                 Margin="0,25"   
+                Text="lida"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    
+                />
+                <Label
+                    HorizontalOptions="EndAndExpand"
+                    Margin="25"
+                    Text="are you donig?"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

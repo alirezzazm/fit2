@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Test2project.Main.Home"
+             IconImageSource="Home.png">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+        <ScrollView Grid.Row="0">
+            <StackLayout>
+                <StackLayout>
+                    <StackLayout >
+                        <Image Source="a.png"
+                               />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+                        
+                    </StackLayout>
+                </StackLayout>
+                
+            </StackLayout>
+        </ScrollView>
+
+        <Button Grid.Row="0" 
+                Clicked="Button_Clicked"
+                Text="+" 
+                BorderColor="#2b3c3c" 
+                BorderWidth="1" 
+                FontAttributes="Bold" 
+                BackgroundColor="#4ba862" 
+                BorderRadius="35" 
+                FontSize="Large" 
+                TextColor="White"
+                HorizontalOptions="End"
+                WidthRequest="50"
+                HeightRequest="50" 
+                Margin="0,0,40,40" 
+                VerticalOptions="End"/>
+        <Button x:Name="Fab1"
+            Grid.Row="0" 
+                Clicked="Button_Clicked"
+                Text="+" 
+                BorderColor="#2b3c3c" 
+                BorderWidth="1" 
+                FontAttributes="Bold" 
+                BackgroundColor="#4ba862" 
+                BorderRadius="35" 
+                FontSize="Large" 
+                TextColor="White"
+                HorizontalOptions="End"
+                WidthRequest="50"
+                HeightRequest="50" 
+                Margin="0,0,90,90" 
+                VerticalOptions="End"
+                IsVisible="False"/>
+        <Button x:Name="Fab2"
+            Grid.Row="0" 
+                Clicked="Button_Clicked"
+                Text="+" 
+                BorderColor="#2b3c3c" 
+                BorderWidth="1" 
+                FontAttributes="Bold" 
+                BackgroundColor="#4ba862" 
+                BorderRadius="35" 
+                FontSize="Large" 
+                TextColor="White"
+                HorizontalOptions="End"
+                WidthRequest="50"
+                HeightRequest="50" 
+                Margin="0,0,130,30" 
+                VerticalOptions="End"
+                IsVisible="False"/>
+        <Button 
+            x:Name="Fab3"
+            Grid.Row="0" 
+                Clicked="Button_Clicked"
+                Text="+" 
+                BorderColor="#2b3c3c" 
+                BorderWidth="1" 
+                FontAttributes="Bold" 
+                BackgroundColor="#4ba862" 
+                BorderRadius="35" 
+                FontSize="Large" 
+                TextColor="White"
+                HorizontalOptions="End"
+                WidthRequest="50"
+                HeightRequest="50" 
+                Margin="0,0,30,130" 
+                VerticalOptions="End"
+                IsVisible="False"/>
+
+    </Grid>
+
+</ContentPage>

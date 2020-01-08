@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Test2project.FirstPages.WhatIsYourSexPage">
+
+    <StackLayout
+            BackgroundColor="#25D0F3"
+            Orientation="Vertical">
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Margin="0,20" Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
+                    <StackLayout>
+                        <Label VerticalOptions="StartAndExpand"
+                               Text="Weight"
+                               FontSize="Large"
+                               Margin="0,10,30,0"
+                               FontAttributes="Bold"/>
+                    </StackLayout>
+                    <StackLayout VerticalOptions="StartAndExpand">
+                        <Entry  MaxLength="4"
+                               x:Name="Entry1"
+                               Keyboard="Numeric"
+                               Placeholder="Kg"
+                                Text="{Binding Weight}"/>
+                        
+                    </StackLayout>
+                    <StackLayout >
+                        <Button  x:Name="Button1"
+                            Text="kg"
+                                Clicked="Button_Clicked"
+                                 VerticalOptions="EndAndExpand"
+                                 HorizontalOptions="EndAndExpand"
+                                Margin="50,0" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout>
+                    <StackLayout  Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
+                        <StackLayout>
+                            <Label VerticalOptions="StartAndExpand"
+                               Text="Height"
+                               FontSize="Large"
+                               Margin="0,10,30,0"
+                               FontAttributes="Bold"/>
+                        </StackLayout>
+                        <StackLayout VerticalOptions="StartAndExpand">
+                            <Entry Placeholder="cm"
+                                   Keyboard="Numeric"
+                                   MaxLength="4"
+                                   Text="{Binding Height}"
+                               />
+
+                        </StackLayout>
+                        <StackLayout >
+                            <Button  
+                            Text="cm"
+                                Clicked="Button_Clicked_2"
+                                 VerticalOptions="EndAndExpand"
+                                 HorizontalOptions="EndAndExpand"
+                                Margin="50,0" />
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Margin="0,20" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" >
+                    <StackLayout>
+                        <DatePicker  Date="{Binding Picker}"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label 
+                            Margin="0,10"
+                            Text="چند سالته؟"
+                           FontSize="Large"
+                           FontAttributes="Bold"/>
+                    </StackLayout>
+
+                   
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                   
+                    <StackLayout>
+                        <Button Text="what s sex?"
+                                FontSize="Large"
+                                 Clicked="Button_Clicked_1"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Vertical"
+                            Margin="0,30"  HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                    <StackLayout
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center">
+                        <Label Text="چقدر فعالیت داری؟"
+                               FontSize="Large"
+                               FontAttributes="Bold"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                        <StackLayout VerticalOptions="CenterAndExpand"
+                                 HorizontalOptions="Center"
+                                 Margin="0,10,10,0">
+                            <Label 
+                             Text="کم"
+                               FontSize="Large"
+                               FontAttributes="Bold"
+                               />
+                            <BoxView Color="White"
+                                 HeightRequest="20"
+                                 WidthRequest="20"
+                                     x:Name="BoxView1"
+                                     
+                                     >
+                                <BoxView.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Tapped="BoxView_tap1"
+                                        NumberOfTapsRequired="1"/>
+                                </BoxView.GestureRecognizers>
+                            </BoxView>
+
+                        </StackLayout>
+                        <StackLayout VerticalOptions="CenterAndExpand"
+                                 HorizontalOptions="Center"
+                                 Margin="0,10,10,0">
+                            <Label 
+                             Text="متوسط"
+                               FontSize="Large"
+                               FontAttributes="Bold"
+                               />
+                            <BoxView Color="White"
+                                 HeightRequest="20"
+                                 WidthRequest="20"
+                                     x:Name="BoxView2"
+                                     
+                                     >
+                                <BoxView.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Tapped="BoxView_tap2"
+                                        NumberOfTapsRequired="1"/>
+                                </BoxView.GestureRecognizers>
+                            </BoxView>
+
+                        </StackLayout>
+                        <StackLayout VerticalOptions="CenterAndExpand"
+                                 HorizontalOptions="Center"
+                                 Margin="0,10,10,0">
+                            <Label 
+                             Text="زیاد"
+                               FontSize="Large"
+                               FontAttributes="Bold"
+                               />
+                            <BoxView Color="White"
+                                 HeightRequest="20"
+                                 WidthRequest="20"
+                                     x:Name="BoxView3"
+                                     
+                                     >
+                                <BoxView.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Tapped="BoxView_tap3"
+                                        NumberOfTapsRequired="1"/>
+                                </BoxView.GestureRecognizers>
+                            </BoxView>
+
+                        </StackLayout>
+                        <StackLayout VerticalOptions="CenterAndExpand"
+                                 HorizontalOptions="Center"
+                                 Margin="0,10,10,0">
+                            <Label 
+                             Text="خیلی زیاد"
+                               FontSize="Large"
+                               FontAttributes="Bold"
+                               />
+                            <BoxView Color="White"
+                                 HeightRequest="20"
+                                 WidthRequest="20"
+                                     x:Name="BoxView4"
+                                     
+                                     >
+                                <BoxView.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Tapped="BoxView_tap4"
+                                        NumberOfTapsRequired="1"/>
+                                </BoxView.GestureRecognizers>
+                            </BoxView>
+
+                        </StackLayout>
+                    </StackLayout>
+
+
+                </StackLayout>
+                <StackLayout Orientation="Vertical"
+                            HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                    <StackLayout
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center">
+                        <Label Text="بدنت چه شکلیه؟"
+                               FontSize="Large"
+                               FontAttributes="Bold"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                        <StackLayout VerticalOptions="CenterAndExpand"
+                                 HorizontalOptions="Center"
+                                 Margin="0,10,10,0">
+                            <Label 
+                             Text="لاغرم"
+                               FontSize="Large"
+                               FontAttributes="Bold"
+                               />
+                            <BoxView Color="White"
+                                 HeightRequest="20"
+                                 WidthRequest="20"
+                                     x:Name="BoxView5"
+                                     
+                                     >
+                                <BoxView.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Tapped="BoxView_tap5"
+                                        NumberOfTapsRequired="1"/>
+                                </BoxView.GestureRecognizers>
+                            </BoxView>
+
+                        </StackLayout>
+                        <StackLayout VerticalOptions="CenterAndExpand"
+                                 HorizontalOptions="Center"
+                                 Margin="0,10,10,0">
+                            <Label 
+                             Text="چاقم"
+                               FontSize="Large"
+                               FontAttributes="Bold"
+                               />
+                            <BoxView Color="White"
+                                 HeightRequest="20"
+                                 WidthRequest="20"
+                                     x:Name="BoxView6"
+                                     
+                                     >
+                                <BoxView.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Tapped="BoxView_tap6"
+                                        NumberOfTapsRequired="1"/>
+                                </BoxView.GestureRecognizers>
+                            </BoxView>
+
+                        </StackLayout>
+                        <StackLayout VerticalOptions="CenterAndExpand"
+                                 HorizontalOptions="Center"
+                                 Margin="0,10,10,0">
+                            <Label 
+                             Text="عضله ایم"
+                               FontSize="Large"
+                               FontAttributes="Bold"
+                               />
+                            <BoxView Color="White"
+                                 HeightRequest="20"
+                                 WidthRequest="20"
+                                     x:Name="BoxView7"
+                                     
+                                     >
+                                <BoxView.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Tapped="BoxView_tap7"
+                                        NumberOfTapsRequired="1"/>
+                                </BoxView.GestureRecognizers>
+                            </BoxView>
+
+                        </StackLayout>
+                        <StackLayout VerticalOptions="CenterAndExpand"
+                                 HorizontalOptions="Center"
+                                 Margin="0,10,10,0">
+                            <Label 
+                             Text="نمیدونم"
+                               FontSize="Large"
+                               FontAttributes="Bold"
+                               />
+                            <BoxView Color="White"
+                                 HeightRequest="20"
+                                 WidthRequest="20"
+                                     x:Name="BoxView8"
+                                     
+                                     >
+                                <BoxView.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Tapped="BoxView_tap8"
+                                        NumberOfTapsRequired="1"/>
+                                </BoxView.GestureRecognizers>
+                            </BoxView>
+
+                        </StackLayout>
+                    </StackLayout>
+
+
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
+                    <StackLayout>
+                        <Entry Placeholder="kg" 
+                               Keyboard="Numeric"
+                               MaxLength="4"
+                               Text="{Binding kg}"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label 
+                            Margin="0,10"
+                            Text="میخوای وزنت چقدر بشه؟"
+                               FontSize="Large"
+                               FontAttributes="Bold"/>
+                        
+                    </StackLayout>
+                  
+                </StackLayout>
+              
+            </StackLayout>
+            
+
+        </ScrollView>
+
+
+        <Button
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+            Text="Next"
+            FontAttributes="Bold"
+            FontSize="Large"
+            Clicked="NextPage"/>
+
+
+
+    </StackLayout>
+   
+</ContentPage>
