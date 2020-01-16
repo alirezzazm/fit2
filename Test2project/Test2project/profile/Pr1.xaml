@@ -5,11 +5,43 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Test2project.profile.Pr1">
-    <ContentPage.Content>
+    
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior 
+                            IconOverride="b.png" />
+    </Shell.BackButtonBehavior>
+
+
+
+
+    <ScrollView>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Image 
+                    Source="a.png"  
+                    Margin="50.0" 
+                    />
+                <Button Grid.Row="0" 
+                
+                Text="+" 
+                BorderColor="#2b3c3c" 
+                BorderWidth="2" 
+                FontAttributes="Bold" 
+                BackgroundColor="#4ba862" 
+                BorderRadius="40" 
+                FontSize="Large" 
+                TextColor="White"
+                HorizontalOptions="End"
+                WidthRequest="35"
+                HeightRequest="35" 
+                Margin="0,0,150,40" 
+                VerticalOptions="End"/>
+
+            </Grid>
         </StackLayout>
-    </ContentPage.Content>
+    </ScrollView>
+        
 </ContentPage>

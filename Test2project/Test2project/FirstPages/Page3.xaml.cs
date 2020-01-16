@@ -12,6 +12,7 @@ namespace Test2project.FirstPages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Page3 : ContentPage
     {
+       
         public Page3()
         {
             InitializeComponent();

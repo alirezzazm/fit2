@@ -39,8 +39,8 @@
                 FontSize="Large" 
                 TextColor="White"
                 HorizontalOptions="End"
-                WidthRequest="50"
-                HeightRequest="50" 
+                WidthRequest="80"
+                HeightRequest="80" 
                 Margin="0,0,40,40" 
                 VerticalOptions="End"/>
         <Button x:Name="Fab1"
@@ -55,8 +55,8 @@
                 FontSize="Large" 
                 TextColor="White"
                 HorizontalOptions="End"
-                WidthRequest="50"
-                HeightRequest="50" 
+                WidthRequest="80"
+                HeightRequest="80" 
                 Margin="0,0,90,90" 
                 VerticalOptions="End"
                 IsVisible="False"/>
@@ -72,8 +72,8 @@
                 FontSize="Large" 
                 TextColor="White"
                 HorizontalOptions="End"
-                WidthRequest="50"
-                HeightRequest="50" 
+                WidthRequest="80"
+                HeightRequest="80" 
                 Margin="0,0,130,30" 
                 VerticalOptions="End"
                 IsVisible="False"/>
@@ -90,8 +90,8 @@
                 FontSize="Large" 
                 TextColor="White"
                 HorizontalOptions="End"
-                WidthRequest="50"
-                HeightRequest="50" 
+                WidthRequest="80"
+                HeightRequest="80" 
                 Margin="0,0,30,130" 
                 VerticalOptions="End"
                 IsVisible="False"/>

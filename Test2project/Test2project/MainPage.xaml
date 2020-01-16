@@ -7,9 +7,10 @@
             xmlns:local="clr-namespace:Test2project.Main"
             mc:Ignorable="d"
              x:Class="Test2project.MainPage"
-            BackgroundColor="#25D0F3">
+             BackgroundColor="#25D0F3">
 <local:Home/>
     <NavigationPage>
+        
         <x:Arguments>
             <local:Me/>
         </x:Arguments>

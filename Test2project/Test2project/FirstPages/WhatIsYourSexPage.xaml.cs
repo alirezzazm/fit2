@@ -24,9 +24,9 @@ namespace Test2project.FirstPages
 
         async void NextPage(object sender, EventArgs e)
        {
-            var fit = (Fit)BindingContext;
-            fit.Date = DateTime.UtcNow;
-            await App.DataBase.SaveFitAsync(fit);
+            //var fit = (Fit)BindingContext;
+            //fit.Date = DateTime.UtcNow;
+            //await App.DataBase.SaveFitAsync(fit);
             Navigation.PushModalAsync(new Page3());
 
         }

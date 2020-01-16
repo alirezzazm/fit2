@@ -12,6 +12,7 @@ namespace Test2project.profile
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Pr1 : ContentPage
     {
+        
         public Pr1()
         {
             InitializeComponent();
