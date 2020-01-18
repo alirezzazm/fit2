@@ -4,8 +4,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.IO;
 using FitDataBase.Data;
+using System.Threading.Tasks;
 
-    
 namespace Test2project
 {
 
@@ -23,11 +23,14 @@ namespace Test2project
                 return database;
             }
         }
+         
         public App()
         {
             InitializeComponent();
 
             MainPage = new WelcomPage();
+           
+          
         }
 
         protected override void OnStart()
