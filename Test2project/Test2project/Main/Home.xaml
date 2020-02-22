@@ -7,6 +7,7 @@
              x:Class="Test2project.Main.Home"
              IconImageSource="Home.png">
 
+   
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -15,87 +16,106 @@
 
         <ScrollView Grid.Row="0">
             <StackLayout>
+
                 <StackLayout>
                     <StackLayout >
                         <Image Source="a.png"
                                />
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
-                        
+
                     </StackLayout>
                 </StackLayout>
-                
+
             </StackLayout>
         </ScrollView>
 
-        <Button Grid.Row="0" 
-                Clicked="Button_Clicked"
-                Text="+" 
-                BorderColor="#2b3c3c" 
-                BorderWidth="1" 
-                FontAttributes="Bold" 
-                BackgroundColor="#4ba862" 
-                BorderRadius="35" 
-                FontSize="Large" 
-                TextColor="White"
+        <Image Grid.Row="0" 
+                x:Name="Fab"
+                Source="belave.png"
                 HorizontalOptions="End"
-                WidthRequest="80"
-                HeightRequest="80" 
-                Margin="0,0,40,40" 
-                VerticalOptions="End"/>
-        <Button x:Name="Fab1"
+                WidthRequest="60"
+                HeightRequest="60" 
+                Margin="0,0,20,40" 
+                VerticalOptions="End">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                    Tapped="Button_Clicked"
+                    NumberOfTapsRequired="1"/>
+            </Image.GestureRecognizers>
+        </Image>
+        <Image 
+             x:Name="Fab4"
             Grid.Row="0" 
-                Clicked="Button_Clicked"
-                Text="+" 
-                BorderColor="#2b3c3c" 
-                BorderWidth="1" 
-                FontAttributes="Bold" 
-                BackgroundColor="#4ba862" 
-                BorderRadius="35" 
-                FontSize="Large" 
-                TextColor="White"
+                IsVisible="False"
+                Source="revord.png"
                 HorizontalOptions="End"
-                WidthRequest="80"
-                HeightRequest="80" 
-                Margin="0,0,90,90" 
-                VerticalOptions="End"
-                IsVisible="False"/>
-        <Button x:Name="Fab2"
-            Grid.Row="0" 
-                Clicked="Button_Clicked"
-                Text="+" 
-                BorderColor="#2b3c3c" 
-                BorderWidth="1" 
-                FontAttributes="Bold" 
-                BackgroundColor="#4ba862" 
-                BorderRadius="35" 
-                FontSize="Large" 
-                TextColor="White"
+                WidthRequest="60"
+                HeightRequest="60" 
+                Margin="0,0,20,40" 
+                VerticalOptions="End">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                    Tapped="Button_Clicked"
+                    NumberOfTapsRequired="1"/>
+            </Image.GestureRecognizers>
+        </Image>
+        <Image Grid.Row="0" 
+                    
+                 
+                Margin="0,0,20,250" 
+                
+                IsVisible="False"
+                x:Name="Fab1"
+                Source="diet.png"
                 HorizontalOptions="End"
-                WidthRequest="80"
-                HeightRequest="80" 
-                Margin="0,0,130,30" 
-                VerticalOptions="End"
-                IsVisible="False"/>
-        <Button 
-            x:Name="Fab3"
-            Grid.Row="0" 
-                Clicked="Button_Clicked"
-                Text="+" 
-                BorderColor="#2b3c3c" 
-                BorderWidth="1" 
-                FontAttributes="Bold" 
-                BackgroundColor="#4ba862" 
-                BorderRadius="35" 
-                FontSize="Large" 
-                TextColor="White"
+                WidthRequest="60"
+                HeightRequest="60" 
+               
+                VerticalOptions="End">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                    Tapped="Button_Clicked"
+                    NumberOfTapsRequired="1"/>
+            </Image.GestureRecognizers>
+        </Image>
+        <Image Grid.Row="0" 
+                    x:Name="Fab2"
+                 
+                           
+                Source="faddy.png"
                 HorizontalOptions="End"
-                WidthRequest="80"
-                HeightRequest="80" 
-                Margin="0,0,30,130" 
-                VerticalOptions="End"
-                IsVisible="False"/>
+                WidthRequest="60"
+                HeightRequest="60"
+                Margin="0,0,20,180"             
+                IsVisible="False"              
+                VerticalOptions="End">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                    Tapped="Button_Clicked"
+                    NumberOfTapsRequired="1"/>
+            </Image.GestureRecognizers>
+        </Image>
+        <Image Grid.Row="0" 
+                    x:Name="Fab3"
+                 HorizontalOptions="End"
+                WidthRequest="60"
+                HeightRequest="60" 
+                Margin="0,0,20,110" 
+                           
+                Source="post.png"
+                        
+                IsVisible="False"              
+                VerticalOptions="End">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                    Tapped="Button_Clicked"
+                    NumberOfTapsRequired="1"/>
+            </Image.GestureRecognizers>
+        </Image>
+
 
     </Grid>
+
 
 </ContentPage>
