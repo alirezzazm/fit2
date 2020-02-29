@@ -1,23 +1,144 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                  xmlns:local1="clr-namespace:Test2project"
-            xmlns:local="clr-namespace:Test2project.Main"
-            mc:Ignorable="d"
-             x:Class="Test2project.MainPage" >
+             xmlns:tabview="clr-namespace:Xam.Plugin.TabView;assembly=Xam.Plugin.TabView"
+            
+             xmlns:tabView="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
+             mc:Ignorable="d"
+             x:Class="Test2project.MainPage"
+             >
+
+    <ContentPage.Content >
+        <Grid>
+            <tabView:SfTabView TabHeaderPosition="Bottom" BackgroundColor="#18DCFF"  VisibleHeaderCount="3"  DisplayMode="ImageWithText" 
+                            >
+                <tabView:SfTabItem ImageSource="dumbbells.png" TitleFontSize="31" >
+                    <tabView:SfTabItem.Content>
+                        <StackLayout BackgroundColor="White">
+                          
+                        </StackLayout>
+                    </tabView:SfTabItem.Content>
+                </tabView:SfTabItem>
+                <tabView:SfTabItem ImageSource="Profile2.png">
+                    <tabView:SfTabItem.Content>
+                        <StackLayout Orientation="Vertical" BackgroundColor="White" >
+                            <StackLayout Orientation="Horizontal" BackgroundColor="#18DCFF">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="settings.png" HeightRequest="25" WidthRequest="25" Margin="13"/>
+                                    <Image Source="zang.png" HeightRequest="25" WidthRequest="25" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal"  >
+                                    <Button BackgroundColor="White" TextColor="Black" FontSize="Large" Margin="13" HorizontalOptions="EndAndExpand" Text="15+" WidthRequest="25" HeightRequest="25" BorderColor="White" BorderWidth="4"/>
+                                </StackLayout>
+                                
+
+                            </StackLayout>
+                            <StackLayout>
+                                <Label Text="slm" TextColor="Black"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </tabView:SfTabItem.Content>
+                </tabView:SfTabItem>
+                <tabView:SfTabItem ImageSource="notepad2.png">
+                    <tabView:SfTabItem.BindingContext>
+                        <StackLayout BackgroundColor="White">
+                            <Button Text="s" WidthRequest="50"
+                BackgroundColor="Black"/>
+                        </StackLayout>
+                    </tabView:SfTabItem.BindingContext>
+                </tabView:SfTabItem>
+            </tabView:SfTabView>
 
 
-        <local:Home/>
-    <NavigationPage>
-        <x:Arguments>
-            <local:Me/>
-        </x:Arguments>
-        
-    </NavigationPage>
-    
-    <local:Messages/>
+
+
+            <Image
+                x:Name="Fab"
+                Source="belave.png"
+                HorizontalOptions="End"
+                WidthRequest="60"
+                HeightRequest="60" 
+                Margin="0,0,20,60" 
+                VerticalOptions="End">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                    Tapped="Button_Clicked"
+                    NumberOfTapsRequired="1"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Image 
+             x:Name="Fab4"
+            Grid.Row="0" 
+                IsVisible="False"
+                Source="revord.png"
+                HorizontalOptions="End"
+                WidthRequest="60"
+                HeightRequest="60" 
+                Margin="0,0,20,60" 
+                VerticalOptions="End">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                    Tapped="Button_Clicked"
+                    NumberOfTapsRequired="1"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Image Grid.Row="0" 
+                    
+                 
+                Margin="0,0,20,270" 
+                
+                IsVisible="False"
+                x:Name="Fab1"
+                Source="diet.png"
+                HorizontalOptions="End"
+                WidthRequest="60"
+                HeightRequest="60" 
+               
+                VerticalOptions="End">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                    Tapped="Button_Clicked"
+                    NumberOfTapsRequired="1"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Image Grid.Row="0" 
+                    x:Name="Fab2"
+                 
+                           
+                Source="faddy.png"
+                HorizontalOptions="End"
+                WidthRequest="60"
+                HeightRequest="60"
+                Margin="0,0,20,200"             
+                IsVisible="False"              
+                VerticalOptions="End">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                    Tapped="Button_Clicked"
+                    NumberOfTapsRequired="1"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Image Grid.Row="0" 
+                    x:Name="Fab3"
+                 HorizontalOptions="End"
+                WidthRequest="60"
+                HeightRequest="60" 
+                Margin="0,0,20,130" 
+                           
+                Source="post.png"
+                        
+                IsVisible="False"              
+                VerticalOptions="End">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                    Tapped="Button_Clicked"
+                    NumberOfTapsRequired="1"/>
+                </Image.GestureRecognizers>
+            </Image>
+        </Grid>
+    </ContentPage.Content>
 
 
 
@@ -27,4 +148,8 @@
 
 
 
-</TabbedPage>
+
+
+
+
+</ContentPage>

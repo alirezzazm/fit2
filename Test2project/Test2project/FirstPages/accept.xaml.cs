@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Test2project.profile;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Test2project.Main
+namespace Test2project.FirstPages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Me : ContentPage
+    public partial class accept : ContentPage
     {
-        public Me()
+        public accept()
         {
             InitializeComponent();
         }
-        public void profile(object sender,EventArgs e)
+        async void Accept(object sender,EventArgs e)
         {
-            Navigation.PushModalAsync(new Pr1());
+            await Navigation.PushModalAsync(new wysp2());
         }
     }
 }

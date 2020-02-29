@@ -4,38 +4,46 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Test2project.FirstPages.WhatIsYourSexPage" BackgroundColor="White">
+             x:Class="Test2project.FirstPages.accept">
     <StackLayout>
         <Grid VerticalOptions="StartAndExpand">
-             <Image
+            <Image
             Source="background.png" />
             <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                 <Image Source="box.png"  />
                 <Entry FontSize="Large" x:Name="entry1"
                        Keyboard="Telephone" 
-                       MaxLength="11"
-                       Placeholder="شماره همراه" 
+                       MaxLength="4"
+                       Placeholder="کد تایید " 
                        VerticalOptions="CenterAndExpand" 
                        HorizontalOptions="CenterAndExpand"
                        />
             </Grid>
-            
+           
+
 
         </Grid>
-        
+
 
         <Grid VerticalOptions="EndAndExpand">
             <Grid.GestureRecognizers>
-                <TapGestureRecognizer Tapped="NextPage"
+                <TapGestureRecognizer Tapped="Accept"
                                           NumberOfTapsRequired="1"/>
             </Grid.GestureRecognizers>
             <Image Source="background1.png">
-                
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Accept"
+                                          NumberOfTapsRequired="1"/>
+                </Image.GestureRecognizers>
             </Image>
-            <Label x:Name="kodetaed"  Text="فرستادم کد تایید"  FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label x:Name="kodetaed"  Text="ثبت نام نکردی ،سریع ثبت نام کن"  FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Accept"
+                                          NumberOfTapsRequired="1"/>
+                </Label.GestureRecognizers>
+            </Label>
         </Grid>
-        
-    </StackLayout> 
-    
-   
+
+    </StackLayout>
+
 </ContentPage>

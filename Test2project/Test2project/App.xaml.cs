@@ -1,11 +1,8 @@
 ﻿using System;
-using Test2project.FirstPages;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 using System.IO;
 using FitDataBase.Data;
-using System.Threading.Tasks;
-using Test2project.Main;
+using Test2project.FirstPages;
 
 namespace Test2project
 {
@@ -29,7 +26,7 @@ namespace Test2project
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new WelcomPage();
            
           
         }

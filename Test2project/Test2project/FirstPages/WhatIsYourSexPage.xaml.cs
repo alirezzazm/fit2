@@ -22,12 +22,22 @@ namespace Test2project.FirstPages
 
 
 
-        async void NextPage(object sender, EventArgs e)
-       {
+        public void NextPage(object sender, EventArgs e)
+        {
             //var fit = (Fit)BindingContext;
             //fit.Date = DateTime.UtcNow;
             //await App.DataBase.SaveFitAsync(fit);
-            Navigation.PushModalAsync(new Page3());
+          Navigation.PushModalAsync(new accept());
+            
+
+        }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            //if(Entry.MaxLengthProperty== MaxLengthProperty.number(11))
+            //{
+              
+            //}
 
         }
 
@@ -35,112 +45,113 @@ namespace Test2project.FirstPages
         //{
         //    DisplayAlert("What's the value?","kg", "ok");
         //}
-        public void Button_Clicked(object sender, EventArgs e)
-        {
+        //public void Button_Clicked(object sender, EventArgs e)
+        //{
 
-            DisplayActionSheet("What's the value?", "", "", "kg", "cup");
+        //    DisplayActionSheet("What's the value?", "", "", "kg", "cup");
 
-            //if (DisplayActionSheet.Click == "kg")
-            //{
-            //    _ = Button1.Text == "kg";
-            //    _ = Entry1.Text == "kg";
+        //if (DisplayActionSheet.Click == "kg")
+        //{
+        //    _ = Button1.Text == "kg";
+        //    _ = Entry1.Text == "kg";
 
-            //}
-            //else if (action == "cup")
-            //{
-            //    _ = Button1.Text == "cup";
-            //    _ = Entry1.Text == "cup";
-            //}
-            //else
-            //{
-            //    return;
-            //}
+        //}
+        //else if (action == "cup")
+        //{
+        //    _ = Button1.Text == "cup";
+        //    _ = Entry1.Text == "cup";
+        //}
+        //else
+        //{
+        //    return;
+        //}
 
 
-        }
+        //}
 
-        public void Button_Clicked_1(object sender, EventArgs e)
-        {
-            DisplayActionSheet("what s sex?", "", "", "Men", "Women");
+        //public void Button_Clicked_1(object sender, EventArgs e)
+        //{
+        //    DisplayActionSheet("what s sex?", "", "", "Men", "Women");
 
-        }
-  
-        public void Button_Clicked_2(object sender, EventArgs e)
-        {
-            DisplayActionSheet("?", "", "", "cm", "m");
+        //}
 
-        }
+        //public void Button_Clicked_2(object sender, EventArgs e)
+        //{
+        //    DisplayActionSheet("?", "", "", "cm", "m");
 
-        public void BoxView_tap1(object sender, EventArgs e)
-        {
-            BoxView1.Color = Color.Black;
-            BoxView2.Color = Color.White;
-            BoxView3.Color = Color.White;
-            BoxView4.Color = Color.White;
-            //if (BoxView1.Color == Color.Black)
-            //{
-            //    sender()
-            //}
+        //}
 
-        }
-        public void BoxView_tap2(object sender, EventArgs e)
-        {
-            BoxView1.Color = Color.White;
-            BoxView2.Color = Color.Black;
-            BoxView3.Color = Color.White;
-            BoxView4.Color = Color.White;
+        //public void BoxView_tap1(object sender, EventArgs e)
+        //{
+        //    BoxView1.Color = Color.Black;
+        //    BoxView2.Color = Color.White;
+        //    BoxView3.Color = Color.White;
+        //    BoxView4.Color = Color.White;
+        //if (BoxView1.Color == Color.Black)
+        //{
+        //    sender()
+        //}
 
-        }
-        public void BoxView_tap3(object sender, EventArgs e)
-        {
-            BoxView1.Color = Color.White;
-            BoxView2.Color = Color.White;
-            BoxView3.Color = Color.Black;
-            BoxView4.Color = Color.White;
+        //    }
+        //    public void BoxView_tap2(object sender, EventArgs e)
+        //    {
+        //        BoxView1.Color = Color.White;
+        //        BoxView2.Color = Color.Black;
+        //        BoxView3.Color = Color.White;
+        //        BoxView4.Color = Color.White;
 
-        }
-        public void BoxView_tap4(object sender, EventArgs e)
-        {
-            BoxView1.Color = Color.White;
-            BoxView2.Color = Color.White;
-            BoxView3.Color = Color.White;
-            BoxView4.Color = Color.Black;
+        //    }
+        //    public void BoxView_tap3(object sender, EventArgs e)
+        //    {
+        //        BoxView1.Color = Color.White;
+        //        BoxView2.Color = Color.White;
+        //        BoxView3.Color = Color.Black;
+        //        BoxView4.Color = Color.White;
 
-        }
-       
+        //    }
+        //    public void BoxView_tap4(object sender, EventArgs e)
+        //    {
+        //        BoxView1.Color = Color.White;
+        //        BoxView2.Color = Color.White;
+        //        BoxView3.Color = Color.White;
+        //        BoxView4.Color = Color.Black;
 
-        public void BoxView_tap5(object sender, EventArgs e)
-        {
-            BoxView5.Color = Color.Black;
-            BoxView6.Color = Color.White;
-            BoxView7.Color = Color.White;
-            BoxView8.Color = Color.White;
+        //    }
 
-        }
-        public void BoxView_tap6(object sender, EventArgs e)
-        {
-            BoxView5.Color = Color.White;
-            BoxView6.Color = Color.Black;
-            BoxView7.Color = Color.White;
-            BoxView8.Color = Color.White;
 
-        }
-        public void BoxView_tap7(object sender, EventArgs e)
-        {
-            BoxView5.Color = Color.White;
-            BoxView6.Color = Color.White;
-            BoxView7.Color = Color.Black;
-            BoxView8.Color = Color.White;
+        //    public void BoxView_tap5(object sender, EventArgs e)
+        //    {
+        //        BoxView5.Color = Color.Black;
+        //        BoxView6.Color = Color.White;
+        //        BoxView7.Color = Color.White;
+        //        BoxView8.Color = Color.White;
 
-        }
-        public void BoxView_tap8(object sender, EventArgs e)
-        {
-            BoxView5.Color = Color.White;
-            BoxView6.Color = Color.White;
-            BoxView7.Color = Color.White;
-            BoxView8.Color = Color.Black;
+        //    }
+        //    public void BoxView_tap6(object sender, EventArgs e)
+        //    {
+        //        BoxView5.Color = Color.White;
+        //        BoxView6.Color = Color.Black;
+        //        BoxView7.Color = Color.White;
+        //        BoxView8.Color = Color.White;
 
-        }
+        //    }
+        //    public void BoxView_tap7(object sender, EventArgs e)
+        //    {
+        //        BoxView5.Color = Color.White;
+        //        BoxView6.Color = Color.White;
+        //        BoxView7.Color = Color.Black;
+        //        BoxView8.Color = Color.White;
 
+        //    }
+        //    public void BoxView_tap8(object sender, EventArgs e)
+        //    {
+        //        BoxView5.Color = Color.White;
+        //        BoxView6.Color = Color.White;
+        //        BoxView7.Color = Color.White;
+        //        BoxView8.Color = Color.Black;
+
+        //    }
+
+        //}
     }
 }
