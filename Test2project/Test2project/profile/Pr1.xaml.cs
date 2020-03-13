@@ -17,5 +17,10 @@ namespace Test2project.profile
         {
             InitializeComponent();
         }
+
+        private void TapGestureRecognizer_TappedforPr1(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new MainPage());
+        }
     }
 }

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"           
+             x:Class="Test2project.Post.Post1"
+            >
+ 
+        <StackLayout>
+             <Grid>
+            <Image Source="background.png" HorizontalOptions="FillAndExpand" Aspect="Fill"/>
+            <StackLayout>
+                 <StackLayout VerticalOptions="StartAndExpand" Orientation="Horizontal">
+                    <Image
+                            Margin="20,20,0,0"
+                            Source="back.png" 
+                           VerticalOptions="StartAndExpand" 
+                           HorizontalOptions="StartAndExpand">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                                NumberOfTapsRequired="1"
+                                Tapped="comeback"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image 
+                        Margin="15,5,0,0"
+                        
+                        Source="post1.png"
+                           VerticalOptions="StartAndExpand" 
+                           HorizontalOptions="EndAndExpand">
+
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                                NumberOfTapsRequired="1"
+                                Tapped="comeback"/>
+                        </Image.GestureRecognizers>
+
+                    </Image>
+
+
+
+                </StackLayout>
+                <StackLayout  VerticalOptions="StartAndExpand">
+                    <Grid >
+               
+               
+                <Image Source="empty.png"
+                      HorizontalOptions="FillAndExpand"
+                  
+                       VerticalOptions="FillAndExpand"/>
+                <Image Source="flot.png" 
+                       Margin="0,200,0,0"
+                       
+                       VerticalOptions="EndAndExpand" />
+
+
+
+            </Grid>
+            
+                </StackLayout>
+                <Grid VerticalOptions="FillAndExpand" Padding="50,0,50,0" >
+                    <Image Source="box.png" 
+                          Aspect="AspectFill" />
+                    <Entry Placeholder="موضوع" HorizontalTextAlignment="Center"
+                           Keyboard="Chat"  />
+                </Grid>
+                <Grid VerticalOptions="FillAndExpand" Padding="50,0,50,0" >
+                    <Image Source="box.png" 
+                          Aspect="AspectFill" />
+                    <Entry VerticalOptions="FillAndExpand"
+                           Placeholder="تمرینت چی بوده"
+                           HorizontalTextAlignment="Center"/>
+                </Grid></StackLayout>
+            </Grid>
+        </StackLayout>
+
+       
+        
+   
+</ContentPage>

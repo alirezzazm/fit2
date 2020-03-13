@@ -60,7 +60,7 @@
                     <Entry FontSize="Large" x:Name="entry1"
                        Keyboard="Email" 
                        
-                       Placeholder="شماره همراه" 
+                       Placeholder="ایمیل" 
                        VerticalOptions="CenterAndExpand" 
                        HorizontalOptions="CenterAndExpand"
                        />
@@ -72,6 +72,8 @@
                             
                         </Image>
                             <Entry Placeholder="سن"
+                                   BackgroundColor="White"
+                                   
                                    Keyboard="Numeric"
                                    MaxLength="2"
                                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
@@ -92,7 +94,9 @@
                             <Entry Placeholder="وزن"
                                    Keyboard="Numeric"
                                    MaxLength="2"
-                                   VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                                   VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
+                                
+                            </Entry>
                         </Grid>
                         <Grid Margin="10,0">
                             <Grid.GestureRecognizers>
@@ -103,7 +107,14 @@
                             <Label Text="جنسیت"
                                    
                                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
-                                
+                                <!--<Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <On Platform="iOS" Value="MarkerFelt-Thin" />
+                                        <On Platform="Android" Value="IRANIANSANS.ttf#IRANIANSANS.ttf" />
+                                        <On Platform="UWP" Value="Assets/Fonts/IRANIANSANS.ttf" />
+                                    </OnPlatform>
+                                </Label.FontFamily>-->
+
                             </Label>
                             
                         </Grid>
@@ -122,13 +133,17 @@
         </Grid>
 
         <Grid VerticalOptions="EndAndExpand">
-            <Image Source="background1.png">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="MainPage"
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer
+                    Tapped="MainPage"
                                           NumberOfTapsRequired="1"/>
-                </Image.GestureRecognizers>
+            </Grid.GestureRecognizers>
+            <Image Source="background1.png">
+               
             </Image>
-            <Label x:Name="kodetaed"  Text="ثبت نام "  FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label x:Name="kodetaed"  Text="ثبت نام "  FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
+                
+            </Label>
         </Grid>
 
     </StackLayout>

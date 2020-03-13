@@ -5,43 +5,126 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Test2project.profile.Pr1">
-    
-    <Shell.BackButtonBehavior>
-        <BackButtonBehavior 
-                            IconOverride="b.png" />
-    </Shell.BackButtonBehavior>
-
-
-
-
     <ScrollView>
+        
+    
+    <StackLayout>
         <StackLayout>
             <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Image 
-                    Source="a.png"  
-                    Margin="50.0" 
-                    />
-                <Button Grid.Row="0" 
-                
-                Text="+" 
-                BorderColor="#2b3c3c" 
-                BorderWidth="2" 
-                FontAttributes="Bold" 
-                BackgroundColor="#4ba862" 
-                BorderRadius="40" 
-                FontSize="Large" 
-                TextColor="White"
-                HorizontalOptions="End"
-                WidthRequest="35"
-                HeightRequest="35" 
-                Margin="0,0,150,40" 
-                VerticalOptions="End"/>
+                <Image Source="background.png" HorizontalOptions="FillAndExpand" Aspect="Fill"/>
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                            <Image
+                            Margin="20"
+                            Source="back.png" 
+                           VerticalOptions="StartAndExpand" 
+                           HorizontalOptions="StartAndExpand">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        NumberOfTapsRequired="1"
+                                        Tapped="TapGestureRecognizer_TappedforPr1"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        <Grid Margin="20"
+                              HorizontalOptions="CenterAndExpand"
+                           >
+                            <Image
+                            Source="Box2.png"
+                            VerticalOptions="StartAndExpand" 
+                           HorizontalOptions="CenterAndExpand"
+                            />
+                            <Label
+                                
+                                Text="محسن شموشکی"
+                                 VerticalOptions="StartAndExpand"
+                                                HorizontalOptions="Center"/>
 
+                        </Grid>
+
+                        <Grid Margin="20"
+                              HorizontalOptions="EndAndExpand">
+                            <Image
+                            Source="boxsmall.png"
+                            VerticalOptions="StartAndExpand" 
+                           HorizontalOptions="EndAndExpand"
+                            />
+                            <Label
+                               Text="25"
+                                 VerticalOptions="StartAndExpand"
+                                HorizontalOptions="CenterAndExpand"/>
+
+                        </Grid>
+                        
+
+
+                    </StackLayout>
+                    <Image Source="pro1.png"
+                      HorizontalOptions="FillAndExpand"
+                           Aspect="AspectFill"
+                       VerticalOptions="StartAndExpand"
+                           />
+                    <Grid>
+                        <Image
+                            Source="box.png"/>
+                        <Entry
+                            Text="09362553085"
+                            HorizontalTextAlignment="Center"
+                            HorizontalOptions="CenterAndExpand"/>
+
+                    </Grid>
+                    <Grid>
+                        <Image
+                            Source="box.png"/>
+                        <Entry
+                            HorizontalOptions="CenterAndExpand"
+                            Text="alireza.zamani7745@gmail.com"
+                            HorizontalTextAlignment="Center"/>
+
+                    </Grid>
+
+
+
+                </StackLayout>
             </Grid>
+            
+            
         </StackLayout>
-    </ScrollView>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Grid HorizontalOptions="CenterAndExpand" Margin="20">
+                        <Image
+                            Source="BlueBox.png"/>
+                        <Entry
+                            Text="قد"
+                            HorizontalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"/>
+                    </Grid>
+                    <Grid HorizontalOptions="CenterAndExpand" Margin="20">
+                        <Image
+                            Source="BlueBox.png"/>
+                        <Entry
+                            Text="وزن"
+                            HorizontalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"/>
+                    </Grid>
+                   
+
+                </StackLayout>
+                <StackLayout>
+                     <Grid>
+                    <Image
+                            Source="BlueBoxBig"/>
+                    <Entry
+                        Text="محسن شموشکی"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"/>
+                </Grid>
+                </StackLayout>
+               
+            </StackLayout>
+        </ScrollView>
         
+    </StackLayout>
+        </ScrollView>
 </ContentPage>

@@ -3,6 +3,9 @@ using Xamarin.Forms;
 using System.IO;
 using FitDataBase.Data;
 using Test2project.FirstPages;
+using Test2project.Post;
+using Test2project.profile;
+using Test2project.Diet;
 
 namespace Test2project
 {

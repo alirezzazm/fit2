@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Test2project.Setting.Pg1Setting">
+    <StackLayout>
+         <Grid>
+        <Image
+            Source="BackgroundSetting.png"
+            VerticalOptions="StartAndExpand" 
+            Aspect="Fill"/>
+        <StackLayout>
+                <Image
+                            Margin="30,20,0,10"
+                            Source="back.png" 
+                           VerticalOptions="StartAndExpand" 
+                           HorizontalOptions="StartAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            NumberOfTapsRequired="1"
+                            Tapped="TapGestureRecognizer_Tappedforsetting"/>
+                    </Image.GestureRecognizers>
+                </Image>
+        </StackLayout>
+        <StackLayout>
+            <Image
+                Source="faddy3.png"/>
+        </StackLayout>
+    </Grid>
+        <StackLayout>
+            <Grid Margin="0,10,0,0">
+                <Image
+                    Source="BlueBoxBig.png"/>
+                <Label
+                    Text="تغییرزبان" HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"/>
+            </Grid>
+            <Grid Margin="0,15,0,0">
+                <Image
+                    Source="BlueBoxBig.png"/>
+                <Label
+                    Text="درباره ما" HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"/>
+            </Grid>
+            <Grid Margin="0,15,0,0">
+                <Image
+                    Source="BlueBoxBig.png"/>
+                <Label
+                    Text="راهنمای فدی" HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"/>
+            </Grid>
+            <Grid Margin="0,15,0,0">
+                <Image
+                    Source="BlueBoxBig.png"/>
+                <Label
+                    Text="نظرات شما در مورد فدی" HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"/>
+            </Grid>
+        </StackLayout>
+    </StackLayout>
+   
+</ContentPage>

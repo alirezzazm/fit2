@@ -4,7 +4,6 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:tabview="clr-namespace:Xam.Plugin.TabView;assembly=Xam.Plugin.TabView"
-            
              xmlns:tabView="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
              mc:Ignorable="d"
              x:Class="Test2project.MainPage"
@@ -23,22 +22,87 @@
                 </tabView:SfTabItem>
                 <tabView:SfTabItem ImageSource="Profile2.png">
                     <tabView:SfTabItem.Content>
-                        <StackLayout Orientation="Vertical" BackgroundColor="White" >
-                            <StackLayout Orientation="Horizontal" BackgroundColor="#18DCFF">
-                                <StackLayout Orientation="Horizontal">
-                                    <Image Source="settings.png" HeightRequest="25" WidthRequest="25" Margin="13"/>
-                                    <Image Source="zang.png" HeightRequest="25" WidthRequest="25" />
-                                </StackLayout>
-                                <StackLayout Orientation="Horizontal"  >
-                                    <Button BackgroundColor="White" TextColor="Black" FontSize="Large" Margin="13" HorizontalOptions="EndAndExpand" Text="15+" WidthRequest="25" HeightRequest="25" BorderColor="White" BorderWidth="4"/>
-                                </StackLayout>
-                                
+                        
+                        <ContentView>
+                           
+                               
+
+                                <StackLayout BackgroundColor="White">
+                                <StackLayout>
+                            <StackLayout VerticalOptions="StartAndExpand" Orientation="Horizontal" BackgroundColor="#18DCFF">
+                                        <StackLayout
+                                            Margin="10"           
+                           VerticalOptions="StartAndExpand" 
+                           HorizontalOptions="StartAndExpand" 
+                                            Orientation="Horizontal">
+                                            <Image Source="settings.png">
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                        NumberOfTapsRequired="1"
+                                                        Tapped="Setting"/>
+                                                </Image.GestureRecognizers>
+                                              
+                                            </Image>
+                                            <Image Source="zang.png"   />
+
+
+                                        </StackLayout>
+
+                                        <StackLayout VerticalOptions="StartAndExpand" 
+                           HorizontalOptions="EndAndExpand"
+                                                     Orientation="Horizontal"
+                                                     Margin="10">
+                                              <Grid   VerticalOptions="StartAndExpand" 
+                           HorizontalOptions="EndAndExpand">
+                                                <Grid.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                        Tapped="Profile"
+                                                        NumberOfTapsRequired="1"/>
+                                                </Grid.GestureRecognizers>
+
+                                            <Image 
+                      
+                                              Source="Box2.png"
+                                               />
+
+                                            <Label
+                                                Text="محسن شموشکی"
+                                                FontSize="Large"
+                                                VerticalOptions="Center"
+                                                HorizontalOptions="Center"/>
+                                        </Grid>
+
+                                        <Grid   VerticalOptions="StartAndExpand" 
+                                        HorizontalOptions="EndAndExpand">
+                                            
+                                             <Image 
+                      
+                                                 Source="boxsmall.png"
+                                                  />
+
+                                            <Label
+                                                Text="+15"
+                                                FontSize="Large"
+                                                VerticalOptions="Center"
+                                                HorizontalOptions="Center"/>
+                                        </Grid>
+                           
+                                        </StackLayout>
+                                      
+
+
 
                             </StackLayout>
-                            <StackLayout>
-                                <Label Text="slm" TextColor="Black"/>
-                            </StackLayout>
-                        </StackLayout>
+                                    <StackLayout BackgroundColor="White">
+                                        <Label
+                                            Text="slm"
+                                            VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"/>
+                                    </StackLayout>
+                                </StackLayout>
+                          </StackLayout>
+                          
+                        </ContentView>
+                       
                     </tabView:SfTabItem.Content>
                 </tabView:SfTabItem>
                 <tabView:SfTabItem ImageSource="notepad2.png">
@@ -99,7 +163,7 @@
                 VerticalOptions="End">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer
-                    Tapped="Button_Clicked"
+                    Tapped="Diet"
                     NumberOfTapsRequired="1"/>
                 </Image.GestureRecognizers>
             </Image>
@@ -126,14 +190,14 @@
                 WidthRequest="60"
                 HeightRequest="60" 
                 Margin="0,0,20,130" 
-                           
+                       
                 Source="post.png"
                         
                 IsVisible="False"              
                 VerticalOptions="End">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer
-                    Tapped="Button_Clicked"
+                    Tapped="Post"
                     NumberOfTapsRequired="1"/>
                 </Image.GestureRecognizers>
             </Image>

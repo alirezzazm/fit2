@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Test2project.Diet.Pg4">
+    <StackLayout>
+         <Grid>
+        <Image
+            Source="background.png" 
+            Aspect="Fill"
+            />
+            <StackLayout>
+                 <StackLayout Orientation="Horizontal">
+                    <Image
+                            Margin="20,20,0,10"
+                            Source="back.png" 
+                           VerticalOptions="StartAndExpand" 
+                           HorizontalOptions="StartAndExpand">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                                NumberOfTapsRequired="1"
+                                Tapped="TapGestureRecognizer_TappedforDietPg4"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+            <Label
+                 Margin="20,20,0,10"
+                Text="تخم مرغ پخته "
+                VerticalOptions="StartAndExpand" 
+                           HorizontalOptions="CenterAndExpand"/>
+            <Label
+                 Margin="20,30,0,10"
+               
+                VerticalOptions="StartAndExpand" 
+                           HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+                <Image
+                    Source="Bigegg.png" Aspect="AspectFill"/>
+                <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
+                    <Grid VerticalOptions="StartAndExpand" Padding="10,0,10,0">
+                        <Image Source="BoxDiet.png"/>
+                        <Entry
+                            Placeholder="گرم"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"/>
+                    </Grid>
+                    <Grid Padding="10,0,10,0" VerticalOptions="StartAndExpand">
+                        <Image Source="BoxDiet.png"/>
+                        <Entry
+                            Placeholder="عدد"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"/>
+                    </Grid>
+                
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Grid HorizontalOptions="CenterAndExpand" Margin="0,0,0,10"
+                          Padding="10">
+                        <Image
+                            Source="BoxL.png"/>
+                        <Label
+                            Text="نیاز روزانه"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"/>
+                    </Grid>
+                    <Grid HorizontalOptions="CenterAndExpand" Margin="0,0,0,10"
+                          Padding="10">
+                        <Image
+                            Source="BoxL.png"/>
+                        <Label
+                            Text="وزن(g)"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"/>
+                    </Grid>
+                    
+                </StackLayout>
+       
+            
+                
+            </StackLayout>
+           
+    </Grid>
+        <StackLayout VerticalOptions="EndAndExpand">
+            <Grid VerticalOptions="EndAndExpand">
+                <Image VerticalOptions="EndAndExpand"
+                    Source="BoxCenterDiet.png"/>
+                <Label
+                    Text="اضافه کردند تخم مرغ" HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"/>
+            </Grid>
+        </StackLayout>
+        <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal">
+            <Grid HorizontalOptions="StartAndExpand">
+                <Image
+                    Source="BoxLeftDiet.png"/>
+                <Label
+                    Text="موادتشکیل دهنده"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"/>
+            </Grid>
+            <Grid HorizontalOptions="EndAndExpand">
+                <Image
+                    Source="BoxRightDiet"/>
+                <Label
+                    Text="خواص"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"/>
+            </Grid>
+            
+        </StackLayout>
+    </StackLayout>
+   
+</ContentPage>

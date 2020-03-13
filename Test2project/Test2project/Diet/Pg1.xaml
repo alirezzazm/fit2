@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Test2project.Diet.Pg1">
+    <StackLayout>
+        <Grid>
+            <Image  
+                
+                    Source="background.png" 
+                     
+                    Aspect="Fill"/>
+            <StackLayout>
+                
+                <StackLayout Orientation="Horizontal">
+                    <Image
+                            Margin="20"
+                            Source="back.png" 
+                           VerticalOptions="StartAndExpand" 
+                           HorizontalOptions="StartAndExpand">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                                NumberOfTapsRequired="1"
+                                Tapped="TapGestureRecognizer_TappedforDietPg1"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Grid Margin="20"
+                              HorizontalOptions="CenterAndExpand"
+                           >
+                       
+
+                    </Grid>
+                   
+
+
+
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Grid Margin="50,0,20,0" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" >
+                        <Image
+                                Source="BoxL.png"/>
+                        <Label
+                            Text="برنامه روز قبل "
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            />
+                    </Grid>
+                    <Grid Margin="0,0,50,0" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" >
+                        <Image
+                                Source="BoxL.png"/>
+                        <Label
+                            Text="برنامه پیشنهادی "
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            />
+                    </Grid>
+                    
+
+                </StackLayout>
+                <StackLayout >
+                    <Grid >
+                        <Image
+                            Source="BoxX.png" />
+                    </Grid>
+                </StackLayout>
+                
+
+            </StackLayout>
+            
+        </Grid>
+        <StackLayout Margin="20" Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand">
+            <Grid>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer
+                        NumberOfTapsRequired="1"
+                        Tapped="NextPg2"/>
+                </Grid.GestureRecognizers>
+                <Image
+                    Source="flot.png"/>
+
+            </Grid>
+            <Grid>
+                <Image
+                    Source="Circle.png"/>
+                <Label
+                    Text="صبحانه +5"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    TextColor="White"/>
+            </Grid>
+            <Grid>
+                <Image
+                    Source="Circle.png"/>
+                <Label
+                    Text="صبحانه +5"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    TextColor="White"/>
+            </Grid>
+           
+
+        </StackLayout>
+        <Grid VerticalOptions="EndAndExpand">
+            <Image
+                Source="background1.png" />
+            <Label
+                Text="برنامه اوکیه؟"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand"/>
+        </Grid>
+        
+        
+    </StackLayout>
+</ContentPage>

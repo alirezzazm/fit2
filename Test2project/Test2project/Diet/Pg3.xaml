@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Test2project.Diet.Pg3">
+    <StackLayout>
+         <Grid>
+        <Image
+            Source="BackgroundDiet.png" VerticalOptions="StartAndExpand" Aspect="Fill"
+            />
+        <StackLayout>
+           
+            <StackLayout Orientation="Horizontal">
+                    <Image
+                            Margin="20,30,0,10"
+                            Source="back.png" 
+                           VerticalOptions="StartAndExpand" 
+                           HorizontalOptions="StartAndExpand">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                                NumberOfTapsRequired="1"
+                                Tapped="TapGestureRecognizer_TappedforDietPg3"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                <Grid
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="StartAndExpand"
+                    Margin="0,20,20,0">
+                     <Image
+                    Source="BackgroundSearch.png" 
+                    />
+                    <!--<SearchBar x:Name="searchBar"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="CenterAndExpand"
+                   Placeholder="Search fruits..."
+                   />-->
+                    
+                </Grid>
+               
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image Margin="20,0,0,0"
+                    Source="Filter.png">
+                    
+                </Image>
+                <Grid Margin="10,0,0,0" HorizontalOptions="CenterAndExpand">
+                    <Image
+                        Source="BoxSMM.png"/>
+                    <Label Text="سبزیجات"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"/>
+                </Grid>
+                <Grid Margin="5,0,0,0" HorizontalOptions="CenterAndExpand">
+                    <Image
+                        Source="BoxSMM.png"/>
+                    <Label Text="میوه ها"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"/>
+                </Grid>
+                <Grid Margin="5,0,0,0" HorizontalOptions="CenterAndExpand">
+                    <Image
+                        Source="BoxSMM.png"/>
+                    <Label Text="غذاها"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"/>
+                </Grid>
+                <Grid Margin="5,0,5,0" HorizontalOptions="CenterAndExpand">
+                    <Image
+                        Source="BoxSMM.png"/>
+                    <Label Text="فیلتر"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"/>
+                </Grid>
+
+
+            </StackLayout>
+           
+           
+        </StackLayout>
+       
+    </Grid>
+         <ScrollView>
+            <StackLayout Orientation="Horizontal">
+                <StackLayout>
+                    <StackLayout Orientation="Vertical" Margin="50,10,0,0">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer
+                                NumberOfTapsRequired="1"
+                                Tapped="NextPg4"/>
+                        </StackLayout.GestureRecognizers>
+                        <Image
+                            Source="egg.png"/>
+                        <Label
+                            Text="تخم مرغ پخته" VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"/>
+
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" Margin="50,10,0,0">
+                        <Image
+                            Source="egg.png"/>
+                        <Label
+                            Text="تخم مرغ پخته" VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"/>
+
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" Margin="50,10,0,0">
+                        <Image
+                            Source="egg.png"/>
+                        <Label
+                            Text="تخم مرغ پخته" VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"/>
+
+                    </StackLayout>
+
+                </StackLayout>
+                <StackLayout>
+                    <StackLayout Orientation="Vertical" Margin="50,10,0,0">
+                        <Image
+                            Source="egg.png"/>
+                        <Label
+                            Text="تخم مرغ پخته" VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"/>
+
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" Margin="50,10,0,0">
+                        <Image
+                            Source="egg.png"/>
+                        <Label
+                            Text="تخم مرغ پخته" VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"/>
+
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" Margin="50,10,0,0">
+                        <Image
+                            Source="egg.png"/>
+                        <Label
+                            Text="تخم مرغ پخته" VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"/>
+
+                    </StackLayout>
+
+                </StackLayout>
+
+
+            </StackLayout>
+            
+        </ScrollView>
+        
+    </StackLayout>
+   
+</ContentPage>

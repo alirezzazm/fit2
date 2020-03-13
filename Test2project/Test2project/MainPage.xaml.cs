@@ -4,8 +4,12 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Test2project.profile;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration;
+using Test2project.Post;
+using Test2project.Setting;
+using Test2project.Diet;
 
 
 
@@ -109,7 +113,25 @@ namespace Test2project
 
             }
         }
+        public void Post(object sender,EventArgs e)
+        {
+            Navigation.PushModalAsync(new Post1());
+        }
 
-        
+        public void Profile(object sender,EventArgs e)
+        {
+            Navigation.PushModalAsync(new Pr1());
+        }
+         public void Setting(object sender,EventArgs e)
+        {
+            Navigation.PushModalAsync(new Pg1Setting());
+        }
+         public  void Diet(object sender,EventArgs e)
+        {
+            Navigation.PushModalAsync(new Pg1());
+        }
+
+
+
     }
 }
