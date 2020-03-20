@@ -14,6 +14,8 @@
                 <Entry FontSize="Large" x:Name="entry1"
                        Keyboard="Telephone" 
                        MaxLength="4"
+                       HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
                        Placeholder="کد تایید " 
                        VerticalOptions="CenterAndExpand" 
                        HorizontalOptions="CenterAndExpand"
@@ -36,7 +38,10 @@
                                           NumberOfTapsRequired="1"/>
                 </Image.GestureRecognizers>
             </Image>
-            <Label x:Name="kodetaed"  Text="ثبت نام نکردی ،سریع ثبت نام کن"  FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Label x:Name="kodetaed"  
+                   HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                   Text="ثبت نام نکردی ،سریع ثبت نام کن"  FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="Accept"
                                           NumberOfTapsRequired="1"/>

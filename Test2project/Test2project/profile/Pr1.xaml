@@ -34,7 +34,8 @@
                            HorizontalOptions="CenterAndExpand"
                             />
                             <Label
-                                
+                                HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
                                 Text="محسن شموشکی"
                                  VerticalOptions="StartAndExpand"
                                                 HorizontalOptions="Center"/>
@@ -50,6 +51,8 @@
                             />
                             <Label
                                Text="25"
+                                HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
                                  VerticalOptions="StartAndExpand"
                                 HorizontalOptions="CenterAndExpand"/>
 
@@ -67,6 +70,7 @@
                         <Image
                             Source="box.png"/>
                         <Entry
+                           VerticalTextAlignment="Center"
                             Text="09362553085"
                             HorizontalTextAlignment="Center"
                             HorizontalOptions="CenterAndExpand"/>
@@ -78,7 +82,9 @@
                         <Entry
                             HorizontalOptions="CenterAndExpand"
                             Text="alireza.zamani7745@gmail.com"
-                            HorizontalTextAlignment="Center"/>
+                            HorizontalTextAlignment="Center"
+                            
+                           VerticalTextAlignment="Center"/>
 
                     </Grid>
 
@@ -98,7 +104,8 @@
                         <Entry
                             Text="قد"
                             HorizontalOptions="CenterAndExpand"
-                            HorizontalTextAlignment="Center"/>
+                            HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"/>
                     </Grid>
                     <Grid HorizontalOptions="CenterAndExpand" Margin="20">
                         <Image
@@ -106,7 +113,8 @@
                         <Entry
                             Text="وزن"
                             HorizontalOptions="CenterAndExpand"
-                            HorizontalTextAlignment="Center"/>
+                            HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"/>
                     </Grid>
                    
 
@@ -118,7 +126,8 @@
                     <Entry
                         Text="محسن شموشکی"
                         HorizontalOptions="Center"
-                        HorizontalTextAlignment="Center"/>
+                        HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"/>
                 </Grid>
                 </StackLayout>
                

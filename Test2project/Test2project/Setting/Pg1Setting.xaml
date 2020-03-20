@@ -34,7 +34,9 @@
                 <Image
                     Source="BlueBoxBig.png"/>
                 <Label
-                    Text="تغییرزبان" HorizontalTextAlignment="Center"
+                    Text="تغییرزبان" 
+                    
+                    HorizontalTextAlignment="Center"
                     VerticalTextAlignment="Center"/>
             </Grid>
             <Grid Margin="0,15,0,0">

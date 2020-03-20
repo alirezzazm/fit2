@@ -34,10 +34,12 @@
                 <Image Source="box.png"  />
                    
                
-                    <Editor   FontSize="Large"  
+                    <Entry   FontSize="Large"  
                        
                        Keyboard="Text" 
-                      
+                      HorizontalTextAlignment="Center"
+                             VerticalTextAlignment="Center"
+                             
                        Placeholder="نام و نام خانوادگی" 
                        VerticalOptions="CenterAndExpand" 
                        HorizontalOptions="CenterAndExpand"
@@ -53,13 +55,17 @@
                        Placeholder="شماره همراه" 
                        VerticalOptions="CenterAndExpand" 
                        HorizontalOptions="CenterAndExpand"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
                        />
                 </Grid>
                    <Grid>
                     <Image Source="box.png"  />
                     <Entry FontSize="Large" x:Name="entry1"
                        Keyboard="Email" 
-                       
+                       HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           
                        Placeholder="ایمیل" 
                        VerticalOptions="CenterAndExpand" 
                        HorizontalOptions="CenterAndExpand"
@@ -72,8 +78,9 @@
                             
                         </Image>
                             <Entry Placeholder="سن"
-                                   BackgroundColor="White"
                                    
+                                   HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
                                    Keyboard="Numeric"
                                    MaxLength="2"
                                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
@@ -85,6 +92,8 @@
                             <Entry Placeholder="قد"
                                    Keyboard="Numeric"
                                    MaxLength="3"
+                                   HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
                                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
                         </Grid>
                         <Grid Margin="10,0">
@@ -94,6 +103,8 @@
                             <Entry Placeholder="وزن"
                                    Keyboard="Numeric"
                                    MaxLength="2"
+                                   HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
                                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
                                 
                             </Entry>
@@ -141,7 +152,10 @@
             <Image Source="background1.png">
                
             </Image>
-            <Label x:Name="kodetaed"  Text="ثبت نام "  FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
+            <Label x:Name="kodetaed"  Text="ثبت نام "  FontSize="Large" 
+                   HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                   VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
                 
             </Label>
         </Grid>
