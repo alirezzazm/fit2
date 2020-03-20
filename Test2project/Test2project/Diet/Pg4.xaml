@@ -6,6 +6,10 @@
              mc:Ignorable="d"
              x:Class="Test2project.Diet.Pg4">
     <StackLayout>
+        <Grid>
+            <StackLayout>
+                
+            
          <Grid>
         <Image
             Source="background.png" 
@@ -94,6 +98,11 @@
         </StackLayout>
         <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal">
             <Grid HorizontalOptions="StartAndExpand">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="mavad"
+                                NumberOfTapsRequired="1"/>
+                        </Grid.GestureRecognizers>
                 <Image
                     Source="BoxLeftDiet.png"/>
                 <Label
@@ -102,6 +111,11 @@
                     VerticalTextAlignment="Center"/>
             </Grid>
             <Grid HorizontalOptions="EndAndExpand">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="khavas"
+                                NumberOfTapsRequired="1"/>
+                        </Grid.GestureRecognizers>
                 <Image
                     Source="BoxRightDiet"/>
                 <Label
@@ -111,6 +125,157 @@
             </Grid>
             
         </StackLayout>
+            </StackLayout>
+            <Grid
+                 IsVisible="False"
+                
+                 Margin="0,0,0,60"
+                VerticalOptions="EndAndExpand"
+                     HorizontalOptions="CenterAndExpand"
+                x:Name="Bt1"
+                
+                >
+               
+                <Button 
+                
+                HeightRequest="539" 
+                     WidthRequest="335" 
+                   
+                     BorderWidth="10"
+                     Opacity="0.9"
+                     BackgroundColor="White"
+                     
+                   /> 
+                <Label
+                    Text="تخم مرغ دارای پروتیین فراوانی هست" VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"/>
+            </Grid>
+            <Grid  IsVisible="False"
+                
+             Margin="0,0,0,60"
+               
+                   
+                x:Name="Bt2">
+                <StackLayout 
+                    Padding="10,10,10,0"
+                    Orientation="Vertical" 
+                             VerticalOptions="StartAndExpand"  HorizontalOptions="Center"
+                             >
+                    <Grid  VerticalOptions="StartAndExpand"
+                            HorizontalOptions="CenterAndExpand" >
+                        <Button
+                            Opacity="0.9"
+                            BackgroundColor="White"/>
+                        <Label
+                            Text="مقدار آب"
+                            HorizontalTextAlignment="End"
+                            VerticalTextAlignment="Center"
+                            Margin="0,0,10,0"/>
+                    </Grid>
+                    <Grid  VerticalOptions="StartAndExpand"
+                            HorizontalOptions="CenterAndExpand" >
+                        <Button
+                            Opacity="0.9"
+                            BackgroundColor="#D6CBCB"/>
+                        <Label
+                            Text="مقدار آب"
+                            HorizontalTextAlignment="End"
+                            VerticalTextAlignment="Center"
+                            Margin="0,0,10,0"/>
+                    </Grid>
+                    <Grid  VerticalOptions="StartAndExpand"
+                            HorizontalOptions="CenterAndExpand" >
+                        <Button
+                            Opacity="0.9"
+                            BackgroundColor="White"/>
+                        <Label
+                            Text="مقدار آب"
+                            HorizontalTextAlignment="End"
+                            VerticalTextAlignment="Center"
+                            Margin="0,0,10,0"/>
+                    </Grid>
+                    <Grid  VerticalOptions="StartAndExpand"
+                            HorizontalOptions="CenterAndExpand" >
+                        <Button
+                            Opacity="0.9"
+                            BackgroundColor="#D6CBCB"/>
+                        <Label
+                            Text="مقدار آب"
+                            HorizontalTextAlignment="End"
+                            VerticalTextAlignment="Center"
+                            Margin="0,0,10,0"/>
+                    </Grid>
+                    <Grid  VerticalOptions="StartAndExpand"
+                            HorizontalOptions="CenterAndExpand" >
+                        <Button
+                            Opacity="0.9"
+                            BackgroundColor="White"/>
+                        <Label
+                            Text="مقدار آب"
+                            HorizontalTextAlignment="End"
+                            VerticalTextAlignment="Center"
+                            Margin="0,0,10,0"/>
+                    </Grid>
+                    <Grid  VerticalOptions="StartAndExpand"
+                            HorizontalOptions="CenterAndExpand" >
+                        <Button
+                            Opacity="0.9"
+                            BackgroundColor="#D6CBCB"/>
+                        <Label
+                            Text="مقدار آب"
+                            HorizontalTextAlignment="End"
+                            VerticalTextAlignment="Center"
+                            Margin="0,0,10,0"/>
+                    </Grid>
+                    <Grid  VerticalOptions="StartAndExpand"
+                            HorizontalOptions="CenterAndExpand" >
+                        <Button
+                            Opacity="0.9"
+                            BackgroundColor="White"/>
+                        <Label
+                            Text="مقدار آب"
+                            HorizontalTextAlignment="End"
+                            VerticalTextAlignment="Center"
+                            Margin="0,0,10,0"/>
+                    </Grid>
+                    <Grid  VerticalOptions="StartAndExpand"
+                            HorizontalOptions="CenterAndExpand" >
+                        <Button
+                            Opacity="0.9"
+                            BackgroundColor="#D6CBCB"/>
+                        <Label
+                            Text="مقدار آب"
+                            HorizontalTextAlignment="End"
+                            VerticalTextAlignment="Center"
+                            Margin="0,0,10,0"/>
+                    </Grid>
+                    <Grid  VerticalOptions="StartAndExpand"
+                            HorizontalOptions="CenterAndExpand" >
+                        <Button
+                            Opacity="0.9"
+                            BackgroundColor="White"/>
+                        <Label
+                            Text="مقدار آب"
+                            HorizontalTextAlignment="End"
+                            VerticalTextAlignment="Center"
+                            Margin="0,0,10,0"/>
+                    </Grid>
+                    <Grid  VerticalOptions="StartAndExpand"
+                            HorizontalOptions="CenterAndExpand" >
+                        <Button
+                            Opacity="0.9"
+                            BackgroundColor="#D6CBCB"/>
+                        <Label
+                            Text="مقدار آب"
+                            HorizontalTextAlignment="End"
+                            VerticalTextAlignment="Center"
+                            Margin="0,0,10,0"/>
+                    </Grid>
+
+
+                </StackLayout>
+            </Grid>
+        </Grid>
     </StackLayout>
    
 </ContentPage>
