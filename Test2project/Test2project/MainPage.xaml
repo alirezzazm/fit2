@@ -24,9 +24,8 @@
                     <tabView:SfTabItem.Content>
                         
                         <ContentView>
-                           
+                            <Grid>
                                
-
                                 <StackLayout BackgroundColor="White">
                                 <StackLayout>
                             <StackLayout VerticalOptions="StartAndExpand" Orientation="Horizontal" BackgroundColor="#18DCFF">
@@ -43,7 +42,13 @@
                                                 </Image.GestureRecognizers>
                                               
                                             </Image>
-                                            <Image Source="zang.png"   />
+                                                <Image Source="zang.png" >
+                                                    <Image.GestureRecognizers>
+                                                        <TapGestureRecognizer
+                                            Tapped="Notif_Open"
+                                            NumberOfTapsRequired="1"/>
+                                                    </Image.GestureRecognizers>
+                                                </Image>
 
 
                                         </StackLayout>
@@ -100,7 +105,21 @@
                                     </StackLayout>
                                 </StackLayout>
                           </StackLayout>
-                          
+                                <Grid VerticalOptions="StartAndExpand"
+                                       Margin="0,45,30,0"
+                                       HorizontalOptions="CenterAndExpand">
+                                    <Image x:Name="Notif"
+                                    Source="Notif.png" 
+                                       VerticalOptions="StartAndExpand"
+                                      
+                                       HorizontalOptions="CenterAndExpand" 
+                                       IsVisible="False">
+                                   
+
+                                </Image>
+                                </Grid>
+                                
+                            </Grid>
                         </ContentView>
                        
                     </tabView:SfTabItem.Content>
