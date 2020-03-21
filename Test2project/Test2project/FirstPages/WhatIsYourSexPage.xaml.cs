@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 using Test2project.FirstPages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using FitDataBase.ModelFitDataBase;
+
+using System.Text.RegularExpressions;
 
 namespace Test2project.FirstPages
 {
@@ -27,7 +28,23 @@ namespace Test2project.FirstPages
             //var fit = (Fit)BindingContext;
             //fit.Date = DateTime.UtcNow;
             //await App.DataBase.SaveFitAsync(fit);
-          Navigation.PushModalAsync(new accept());
+            var phone = shomare.Text;
+            var phonepatern= "^(0|/+98)?([ ]|,|-|[()]){0,2}9[0|1|2|3|4]([ ]|,|-|[()]){0,3}(?:[0-9]([ ]|,|-|[()]){0,2}){8}$";
+
+
+            if (Regex.IsMatch(phone, phonepatern))
+            {
+                Navigation.PushModalAsync(new accept());
+            }
+
+            else
+            {
+                kodetaed.Text = "شماره اشتباه";
+            }
+
+
+
+         
             
 
         }

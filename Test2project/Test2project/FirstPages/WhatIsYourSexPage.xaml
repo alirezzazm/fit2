@@ -14,10 +14,12 @@
             <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                 <Image Source="box.png"  />
                 <Entry
+                    x:Name="shomare"
                     HorizontalTextAlignment="Center"
                     VerticalTextAlignment="Center"
                     Placeholder="شماره همراه"
                     Keyboard="Numeric"
+                    MaxLength="11"
                     />
             </Grid>
             
@@ -33,7 +35,10 @@
             <Image Source="background1.png">
                 
             </Image>
-            <Label x:Name="kodetaed"  Text="فرستادم کد تایید" 
+            <Label 
+                
+                x:Name="kodetaed"  
+                Text="فرستادم کد تایید" 
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
                    FontSize="Large"

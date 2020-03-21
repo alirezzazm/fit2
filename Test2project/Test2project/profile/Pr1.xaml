@@ -34,9 +34,10 @@
                            HorizontalOptions="CenterAndExpand"
                             />
                             <Label
+                                x:Name="nameandfamily1"
                                 HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"
-                                Text="محسن شموشکی"
+                                Text="{Binding Name}"
                                  VerticalOptions="StartAndExpand"
                                                 HorizontalOptions="Center"/>
 
@@ -50,7 +51,8 @@
                            HorizontalOptions="EndAndExpand"
                             />
                             <Label
-                               Text="25"
+                              x:Name="age1"
+                               Text="{Binding age}"
                                 HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"
                                  VerticalOptions="StartAndExpand"

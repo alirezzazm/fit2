@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Text.RegularExpressions;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,9 +16,29 @@ namespace Test2project.FirstPages
         {
             InitializeComponent();
         }
-        async void Accept(object sender,EventArgs e)
+       public void Accept(object sender,EventArgs e)
         {
-            await Navigation.PushModalAsync(new wysp2());
+            var code = taed1.Text;
+            var codepatern= "^[0-9]*$";
+
+
+            if(Regex.IsMatch(code, codepatern))
+            {
+                Navigation.PushModalAsync(new wysp2());
+            }
+             
+            
+
+            else
+            {
+                taed1.Text = "";
+                taed1.Placeholder = "کد اشتباه";
+            }
+               
+
+
+
+           
         }
     }
 }

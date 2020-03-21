@@ -34,7 +34,9 @@
                 <Image Source="box.png"  />
                    
                
-                    <Entry   FontSize="Large"  
+                    <Entry  
+                        x:Name="nameandfamily"
+                        FontSize="Large"  
                        
                        Keyboard="Text" 
                       HorizontalTextAlignment="Center"
@@ -78,7 +80,7 @@
                             
                         </Image>
                             <Entry Placeholder="سن"
-                                   
+                                  
                                    HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"
                                    Keyboard="Numeric"

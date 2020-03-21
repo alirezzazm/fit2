@@ -95,5 +95,10 @@ namespace Test2project.Diet
             }
         }
 
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
+
     }
 }

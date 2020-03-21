@@ -11,7 +11,10 @@
             Source="background.png" />
             <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                 <Image Source="box.png"  />
-                <Entry FontSize="Large" x:Name="entry1"
+                <Entry 
+                    
+                    FontSize="Large" 
+                    x:Name="taed1"
                        Keyboard="Telephone" 
                        MaxLength="4"
                        HorizontalTextAlignment="Center"

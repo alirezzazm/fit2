@@ -22,5 +22,9 @@ namespace Test2project.Post
         {
             Navigation.PushModalAsync(new MainPage ());
         }
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
     }
 }

@@ -12,8 +12,9 @@
     <ContentPage.Content >
         <Grid>
             <tabView:SfTabView TabHeaderPosition="Bottom" BackgroundColor="#18DCFF"  VisibleHeaderCount="3"  DisplayMode="ImageWithText" 
+                               SelectionChanged="ChangeIcon"
                             >
-                <tabView:SfTabItem ImageSource="dumbbells.png" TitleFontSize="31" >
+                <tabView:SfTabItem ImageSource="dumbbells.png" TitleFontSize="31" x:Name="Tab1"  >
                     <tabView:SfTabItem.Content>
                         <StackLayout BackgroundColor="White">
                           
@@ -21,6 +22,7 @@
                     </tabView:SfTabItem.Content>
                 </tabView:SfTabItem>
                 <tabView:SfTabItem ImageSource="Profile2.png">
+                    
                     <tabView:SfTabItem.Content>
                         
                         <ContentView>

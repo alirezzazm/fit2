@@ -165,7 +165,14 @@ namespace Test2project
 
             }
         }
-
+        public void ChangeIcon(object sender, Syncfusion.XForms.TabView.SelectionChangedEventArgs e)
+        {
+         // Tab1.ImageSource.
+        }
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
 
 
     }

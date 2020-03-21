@@ -25,5 +25,9 @@ namespace Test2project.Diet
         {
             Navigation.PushModalAsync(new Pg2());
         }
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
     }
 }

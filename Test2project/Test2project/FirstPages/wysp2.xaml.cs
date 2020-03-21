@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Test2project.profile;
 
 namespace Test2project.FirstPages
 {
@@ -24,8 +25,23 @@ namespace Test2project.FirstPages
         }
             public void MainPage(object sender,EventArgs e)
         {
-             Navigation.PushModalAsync(new MainPage());
+            if (!string.IsNullOrWhiteSpace(nameandfamily.Text))
+            {
+                 App.Database.SavePersonAsync(new Person
+                {
+                    Name = nameandfamily.Text,
+                   
+                });
+
+                nameandfamily.Text = string.Empty;
+                
+
+            }
+
+
+            Navigation.PushModalAsync(new MainPage());
             
         }
+       
     }
 }

@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 using SQLite;
+using SQLitePCL;
 
-namespace FitDataBase.ModelFitDataBase
+namespace Test2project
 {
-   public class Fit
+    public class Person
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
-        public string Text { get; set; }
-        public DateTime Date { get; set; }
+        public string Name { get; set; }
+       // public int Age { get; set; }
     }
 }

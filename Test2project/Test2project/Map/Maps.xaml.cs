@@ -16,5 +16,9 @@ namespace Test2project.Map
         {
             InitializeComponent();
         }
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
     }
 }

@@ -21,9 +21,16 @@ namespace Test2project.Diet
             Navigation.PushModalAsync(new Pg2());
         }
 
-        private void TapGestureRecognizer_TappedforDietPg1(object sender, EventArgs e)
+        private async void TapGestureRecognizer_TappedforDietPg1(object sender, EventArgs e)
         {
             Navigation.PushModalAsync(new MainPage());
+           
+        }
+       
+        protected override bool OnBackButtonPressed()
+        {
+
+           return true;
         }
     }
 }
