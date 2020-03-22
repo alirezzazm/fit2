@@ -52,7 +52,7 @@
                             />
                             <Label
                               x:Name="age1"
-                               Text="{Binding age}"
+                               Text="{Binding Age}"
                                 HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"
                                  VerticalOptions="StartAndExpand"
@@ -72,8 +72,9 @@
                         <Image
                             Source="box.png"/>
                         <Entry
+                            x:Name="shomare1"
                            VerticalTextAlignment="Center"
-                            Text="09362553085"
+                            Text="{Binding Tel}"
                             HorizontalTextAlignment="Center"
                             HorizontalOptions="CenterAndExpand"/>
 
@@ -82,8 +83,9 @@
                         <Image
                             Source="box.png"/>
                         <Entry
+                            x:Name="email1"
                             HorizontalOptions="CenterAndExpand"
-                            Text="alireza.zamani7745@gmail.com"
+                            Text="{Binding Email}"
                             HorizontalTextAlignment="Center"
                             
                            VerticalTextAlignment="Center"/>
@@ -104,7 +106,8 @@
                         <Image
                             Source="BlueBox.png"/>
                         <Entry
-                            Text="قد"
+                            x:Name="qad1"
+                            Text="{Binding Height}"
                             HorizontalOptions="CenterAndExpand"
                             HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"/>
@@ -113,7 +116,8 @@
                         <Image
                             Source="BlueBox.png"/>
                         <Entry
-                            Text="وزن"
+                            x:Name="vazn1"
+                            Text="{Binding Weight}"
                             HorizontalOptions="CenterAndExpand"
                             HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"/>
@@ -126,7 +130,8 @@
                     <Image
                             Source="BlueBoxBig"/>
                     <Entry
-                        Text="محسن شموشکی"
+                        x:Name="esm"
+                        Text="{Binding Name}"
                         HorizontalOptions="Center"
                         HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"/>

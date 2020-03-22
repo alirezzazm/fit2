@@ -9,20 +9,21 @@
         <Grid VerticalOptions="StartAndExpand">
             <Image
             Source="background.png"  />
+            
             <Grid  VerticalOptions="StartAndExpand"
                            HorizontalOptions="CenterAndExpand"
-                   Margin="0,20">
+                   Margin="0,5">
             <Image Source="Profile3.png"
                        WidthRequest="100"
                        HeightRequest="100">
-                    <!--<Image.GestureRecognizers>
+                    <Image.GestureRecognizers>
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="imagetab"/>
-                    </Image.GestureRecognizers>-->
-            </Image>
+                    </Image.GestureRecognizers>
+                </Image>
                 <Image Source="belavecopy.png" WidthRequest="10" HeightRequest="10" Margin="0,60,60,0">
-                    <!--<Image.GestureRecognizers>
+                    <Image.GestureRecognizers>
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="imagetab"/>
-                    </Image.GestureRecognizers>-->
+                    </Image.GestureRecognizers>
 
                 </Image>
             
@@ -51,7 +52,9 @@
             </Grid>
                    <Grid>
                     <Image Source="box.png"  />
-                    <Entry FontSize="Large"
+                    <Entry 
+                        x:Name="shomare"
+                        FontSize="Large"
                        Keyboard="Telephone" 
                        MaxLength="11"
                        Placeholder="شماره همراه" 
@@ -63,7 +66,9 @@
                 </Grid>
                    <Grid>
                     <Image Source="box.png"  />
-                    <Entry FontSize="Large" x:Name="entry1"
+                    <Entry 
+                        FontSize="Large" 
+                           x:Name="email"
                        Keyboard="Email" 
                        HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"
@@ -79,7 +84,10 @@
                             <Image Source="boxsmall.png" Margin="5,0" >
                             
                         </Image>
-                            <Entry Placeholder="سن"
+                            <Entry 
+                                x:Name="age"
+                                
+                                Placeholder="سن"
                                   
                                    HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"
@@ -91,7 +99,9 @@
                             <Image Source="boxsmall.png" Margin="5,0" >
 
                             </Image>
-                            <Entry Placeholder="قد"
+                            <Entry 
+                                x:Name="qad"
+                                Placeholder="قد"
                                    Keyboard="Numeric"
                                    MaxLength="3"
                                    HorizontalTextAlignment="Center"
@@ -102,7 +112,11 @@
                             <Image Source="boxsmall.png" Margin="5,0" >
 
                             </Image>
-                            <Entry Placeholder="وزن"
+                            <Entry 
+                                x:Name="vazn"
+                                
+                                
+                                Placeholder="وزن"
                                    Keyboard="Numeric"
                                    MaxLength="2"
                                    HorizontalTextAlignment="Center"
@@ -139,8 +153,46 @@
                 
             </StackLayout>
             </StackLayout>
-            
-         
+
+            <StackLayout VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand" Orientation="Horizontal"
+                         Padding="100"
+                         Margin="0,50,0,0"
+                         IsVisible="False"
+                         x:Name="display">
+                <Grid>
+                    <Image Source="display.png"/>
+                    <Label
+                        Text="عکس گرفتن"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        TextColor="White"/>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer
+                            NumberOfTapsRequired="1"
+                            Tapped="axgereftan"/>
+                    </Grid.GestureRecognizers>
+                </Grid>
+                <Grid>
+                    <Image Source="display.png"/>
+                    <Label
+                        Text="گالری"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        TextColor="White"/>
+                   <Grid.GestureRecognizers>
+                    <TapGestureRecognizer
+                            NumberOfTapsRequired="1"
+                            Tapped="gallery"/>
+                    </Grid.GestureRecognizers>
+                </Grid>
+
+
+            </StackLayout>
+           
+
 
 
         </Grid>

@@ -36,7 +36,7 @@ namespace Test2project
         {
             InitializeComponent();
 
-            MainPage = new WelcomPage();
+            MainPage = new wysp2();
            
           
         }

@@ -39,6 +39,12 @@ namespace Test2project.profile
             Person person = await App.Database.GetPeopleAsync();
 
             nameandfamily1.Text = person.Name;
+            shomare1.Text = person.Tel;
+            email1.Text = person.Email;
+            age1.Text = person.Age;
+            qad1.Text = person.Height;
+            vazn1.Text = person.Weight;
+            esm.Text = person.Name;
 
 
 
