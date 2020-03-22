@@ -36,7 +36,10 @@ namespace Test2project.profile
         {
             base.OnAppearing();
             //listView.ItemsSource = await App.Database.GetPeopleAsync();
-            nameandfamily1.Text = await App.Database.GetPeopleAsync();
+            Person person = await App.Database.GetPeopleAsync();
+
+            nameandfamily1.Text = person.Name;
+
 
 
         }

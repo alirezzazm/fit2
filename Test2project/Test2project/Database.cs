@@ -23,9 +23,10 @@ namespace Test2project
             _database.CreateTableAsync<Person>().Wait();
         }
 
-        public Task<List<Person>> GetPeopleAsync()
+        public Task<Person> GetPeopleAsync()
         {
-            return _database.Table<Person>().ToListAsync();
+            return _database.Table<Person>().FirstOrDefaultAsync();
+
         }
 
         public Task<int> SavePersonAsync(Person person)
