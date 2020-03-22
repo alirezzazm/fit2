@@ -10,6 +10,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Test2project;
 
+
 namespace Test2project.profile
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -23,7 +24,7 @@ namespace Test2project.profile
             
         }
 
-        private void TapGestureRecognizer_TappedforPr1(object sender, EventArgs e)
+        public void TapGestureRecognizer_TappedforPr1(object sender, EventArgs e)
         {
             Navigation.PushModalAsync(new MainPage());
         }
@@ -35,7 +36,9 @@ namespace Test2project.profile
         {
             base.OnAppearing();
             //listView.ItemsSource = await App.Database.GetPeopleAsync();
-           
+            nameandfamily1.Text = await App.Database.GetPeopleAsync();
+
+
         }
     }
 }
