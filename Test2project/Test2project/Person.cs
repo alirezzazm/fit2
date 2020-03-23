@@ -20,6 +20,8 @@ namespace Test2project
 
         public string Weight { get; set; }
 
+        public string Image { get; set; }
+
 
     }
 }

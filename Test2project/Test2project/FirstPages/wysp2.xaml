@@ -5,15 +5,18 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Test2project.FirstPages.wysp2">
-    <StackLayout>
-        <Grid VerticalOptions="StartAndExpand">
+    <StackLayout >
+        <Grid VerticalOptions="StartAndExpand"
+              x:Name="Grid1">
             <Image
             Source="background.png"  />
             
             <Grid  VerticalOptions="StartAndExpand"
                            HorizontalOptions="CenterAndExpand"
                    Margin="0,5">
-            <Image Source="Profile3.png"
+            <Image 
+                x:Name="axprofile"
+                Source="Profile3.png"
                        WidthRequest="100"
                        HeightRequest="100">
                     <Image.GestureRecognizers>

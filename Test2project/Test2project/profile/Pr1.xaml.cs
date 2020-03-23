@@ -45,6 +45,7 @@ namespace Test2project.profile
             qad1.Text = person.Height;
             vazn1.Text = person.Weight;
             esm.Text = person.Name;
+            axprofile1.Source = person.Image;
 
 
 

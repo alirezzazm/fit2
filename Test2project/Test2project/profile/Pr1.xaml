@@ -63,7 +63,9 @@
 
 
                     </StackLayout>
-                    <Image Source="pro1.png"
+                    <Image 
+                        x:Name="axprofile1"
+                        Source="pro1.png"
                       HorizontalOptions="FillAndExpand"
                            Aspect="AspectFill"
                        VerticalOptions="StartAndExpand"
