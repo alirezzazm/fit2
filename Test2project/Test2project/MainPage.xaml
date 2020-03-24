@@ -17,7 +17,58 @@
                 <tabView:SfTabItem ImageSource="dumbbells.png" TitleFontSize="31" x:Name="Tab1"  >
                     <tabView:SfTabItem.Content>
                         <StackLayout BackgroundColor="White">
-                          
+
+                            <ScrollView>
+                                <StackLayout>
+                                    <StackLayout Padding="10">
+                                        <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="EndAndExpand">
+
+                                            <Label Text="محسن شموشکی" TextColor="Black" FontSize="Large" HorizontalOptions="EndAndExpand"/>
+                                            <Image Source="iconprofile.png" HorizontalOptions="EndAndExpand"/>
+
+                                        </StackLayout>
+                                        <Image Source="Body.png" VerticalOptions="StartAndExpand"
+                                                               HorizontalOptions="CenterAndExpand"
+                                                            />
+                                        <StackLayout VerticalOptions="StartAndExpand"
+                                                                      Orientation="Horizontal"
+                                                                     HorizontalOptions="StartAndExpand"
+                                                                     Margin="5,0,0,0">
+                                            <Image Source="Like.png" HorizontalOptions="StartAndExpand">
+
+                                            </Image>
+                                            <Image VerticalOptions="StartAndExpand" Source="Comment.png">
+
+                                            </Image>
+
+                                        </StackLayout>
+                                        <Label 
+                                            x:Name="mozoe1"
+                                            VerticalOptions="StartAndExpand"
+                                                               HorizontalOptions="EndAndExpand"
+                                                               Text="{Binding Mozoe}"
+                                          
+                                            
+                                                               TextColor="Black"
+                                                               FontSize="Large"
+                                                            />
+                                    </StackLayout>
+
+
+
+
+
+
+
+
+
+
+
+                                </StackLayout>
+
+
+                            </ScrollView>
+
                         </StackLayout>
                     </tabView:SfTabItem.Content>
                 </tabView:SfTabItem>
@@ -101,9 +152,14 @@
 
                             </StackLayout>
                                     <StackLayout BackgroundColor="White">
-                                        <Label
-                                            Text="slm"
-                                            VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"/>
+                                        
+                                        
+                                        
+                                          
+                                        
+                                        
+                           
+                                        
                                     </StackLayout>
                                 </StackLayout>
                           </StackLayout>

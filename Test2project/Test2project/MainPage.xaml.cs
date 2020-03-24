@@ -11,6 +11,9 @@ using Test2project.Post;
 using Test2project.Setting;
 using Test2project.Diet;
 
+using SQLite;
+using SQLitePCL;
+
 
 
 namespace Test2project
@@ -173,6 +176,9 @@ namespace Test2project
         {
             return true;
         }
+
+
+       
 
 
     }

@@ -33,7 +33,7 @@
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer
                                 NumberOfTapsRequired="1"
-                                Tapped="comeback"/>
+                                Tapped="post"/>
                         </Image.GestureRecognizers>
 
                     </Image>
@@ -62,13 +62,17 @@
                 <Grid VerticalOptions="FillAndExpand" Padding="50,0,50,0" >
                     <Image Source="box.png" 
                           Aspect="AspectFill" />
-                    <Entry Placeholder="موضوع" HorizontalTextAlignment="Center"
+                    <Entry 
+                        x:Name="mozoe"
+                        Placeholder="موضوع" HorizontalTextAlignment="Center"
                            Keyboard="Chat"  />
                 </Grid>
                 <Grid VerticalOptions="FillAndExpand" Padding="50,0,50,0" >
                     <Image Source="box.png" 
                           Aspect="AspectFill" />
-                    <Entry VerticalOptions="FillAndExpand"
+                    <Entry 
+                        x:Name="tamrin"
+                        VerticalOptions="FillAndExpand"
                            Placeholder="تمرینت چی بوده"
                            HorizontalTextAlignment="Center"/>
                 </Grid></StackLayout>

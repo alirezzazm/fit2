@@ -96,7 +96,7 @@ namespace Test2project.FirstPages
                 //Scale to smaller  
                 await((Image)sender).ScaleTo(0.1, 50, Easing.SinIn);
                 //Wait a moment  
-                await Task.Delay(0);
+                
                 //Scale to normal  
                 await((Image)sender).ScaleTo(1, 50, Easing.SinIn);
 
@@ -112,7 +112,7 @@ namespace Test2project.FirstPages
                 //Scale to smaller  
                 await((Image)sender).ScaleTo(0.1, 50, Easing.Linear);
                 //Wait a moment  
-                await Task.Delay(0);
+                
                 //Scale to normal  
                 await((Image)sender).ScaleTo(1, 50, Easing.Linear);
 
@@ -189,6 +189,7 @@ namespace Test2project.FirstPages
 
             axprofile.Source = ImageSource.FromStream(() =>
             {
+               
                 var stream = file.GetStream();
                 file.Dispose();
                 return stream;

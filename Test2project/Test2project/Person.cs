@@ -22,6 +22,10 @@ namespace Test2project
 
         public string Image { get; set; }
 
+        public string Mozoe { get; set; }
+
+        public string Tamrin { get; set; }
+
 
     }
 }
