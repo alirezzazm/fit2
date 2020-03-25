@@ -38,9 +38,9 @@ namespace Test2project
             return _database.InsertAsync(person);
         }
 
-        public Task<PostData> GetPeopleAsync()
+        public Task<PostData> GetPostDataAsync()
         {
-            return _database.Table<PostData>.FirstOrDefaultAsync();
+            return _database.Table<PostData>().FirstOrDefaultAsync();
 
         }
         public Task<int> SavePostDataAsync(PostData postData)
