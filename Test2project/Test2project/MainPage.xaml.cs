@@ -26,6 +26,7 @@ namespace Test2project
         public MainPage()
         {
             
+            
             InitializeComponent();
             //  On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
            
@@ -177,8 +178,25 @@ namespace Test2project
             return true;
         }
 
+        protected override async void OnAppearing()
+        {
+            Person person = await App.Database.GetPeopleAsync();
+            var A = await App.Database.GetPeopleAsync();
+            try 
+            {
+                mozoe1.Text = person.Mozoe;
+            }
 
-       
+            catch(Person.Mozoe = null)
+            {
+                mozoe1.Text = string.Empty;
+            }
+
+        }
+
+
+
+
 
 
     }
