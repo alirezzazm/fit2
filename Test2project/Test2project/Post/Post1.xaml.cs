@@ -19,13 +19,15 @@ namespace Test2project.Post
     {
         
 
-        public Post1()
+        public Post1(Label mozoe1)
         {
            
             InitializeComponent();
         }
 
-      
+        public Post1()
+        {
+        }
 
         public void comeback(object sender, EventArgs e)
         {
