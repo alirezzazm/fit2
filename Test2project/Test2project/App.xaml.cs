@@ -36,7 +36,7 @@ namespace Test2project
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Post1();
            
           
         }

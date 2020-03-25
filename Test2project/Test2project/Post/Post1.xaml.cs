@@ -19,15 +19,13 @@ namespace Test2project.Post
     {
         
 
-        public Post1(Label mozoe1)
+        public Post1()
         {
            
             InitializeComponent();
         }
 
-        public Post1()
-        {
-        }
+       
 
         public void comeback(object sender, EventArgs e)
         {
@@ -47,10 +45,10 @@ namespace Test2project.Post
             if (!string.IsNullOrWhiteSpace(mozoe.Text)
                 && string.IsNullOrWhiteSpace(tamrin.Text))
             {
-              await  App.Database.SavePersonAsync(new Person
+              await  App.Database.SavePostDataAsync(new PostData
                 {
                     Mozoe=mozoe.Text,
-                    Tamrin=tamrin.Text,
+                    //Tamrin=tamrin.Text,
 
                 });
 
