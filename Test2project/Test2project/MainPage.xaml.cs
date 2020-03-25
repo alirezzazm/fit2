@@ -180,7 +180,7 @@ namespace Test2project
 
         protected override async void OnAppearing()
         {
-            PostData postData = await App.Database.GetPeopleAsync;
+            PostData postData = await App.Database.GetPostDataAsync();
             
             try 
             {
