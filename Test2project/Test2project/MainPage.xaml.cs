@@ -187,8 +187,8 @@ namespace Test2project
                 mozoe1.Text = person.Mozoe;
             }
 
-            catch(Person.Mozoe = null)
-            {
+            catch
+                {
                 mozoe1.Text = string.Empty;
             }
 
