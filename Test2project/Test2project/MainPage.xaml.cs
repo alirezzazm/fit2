@@ -180,14 +180,14 @@ namespace Test2project
 
         protected override async void OnAppearing()
         {
-            Person person = await App.Database.GetPeopleAsync();
-            var A = await App.Database.GetPeopleAsync();
+            PostData postData = await App.Database.GetPeopleAsync;
+            
             try 
             {
-                mozoe1.Text = person.Mozoe;
+                mozoe1.Text = postData.Mozoe;
             }
 
-            catch(Person.Mozoe = null)
+            catch
             {
                 mozoe1.Text = string.Empty;
             }
