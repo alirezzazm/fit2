@@ -182,12 +182,12 @@ namespace Test2project
         {
             PostData postData = await App.Database.GetPostDataAsync();
 
-            
-            
+
+          string  s = postData.Mozoe;
             try 
             {
-              
-              foreach( var creatstack1 in stackpost)
+
+                foreach (dooble in s)
                 {
 
                     stackpost2.Children.Add(stackpost);
