@@ -19,8 +19,8 @@
                         <StackLayout BackgroundColor="White">
 
                             <ScrollView>
-                                <StackLayout>
-                                    <StackLayout Padding="10">
+                                <StackLayout x:Name="stackpost2">
+                                    <StackLayout Padding="10" x:Name="stackpost">
                                         <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="EndAndExpand">
 
                                             <Label Text="محسن شموشکی" TextColor="Black" FontSize="Large" HorizontalOptions="EndAndExpand"/>

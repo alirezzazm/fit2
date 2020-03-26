@@ -48,10 +48,11 @@ namespace Test2project.Post
               await  App.Database.SavePostDataAsync(new PostData
                 {
                     Mozoe=mozoe.Text,
+                      
                     //Tamrin=tamrin.Text,
 
                 });
-
+                
                 mozoe.Text = string.Empty;
                 tamrin.Text = string.Empty;
 

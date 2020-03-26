@@ -181,10 +181,20 @@ namespace Test2project
         protected override async void OnAppearing()
         {
             PostData postData = await App.Database.GetPostDataAsync();
+
+            
             
             try 
             {
-                mozoe1.Text = postData.Mozoe;
+              
+              foreach( var creatstack1 in stackpost)
+                {
+
+                    stackpost2.Children.Add(stackpost);
+                    mozoe1.Text = postData.Mozoe;
+
+                }
+
             }
 
             catch
