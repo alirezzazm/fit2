@@ -43,6 +43,11 @@ namespace Test2project
             return _database.Table<PostData>().FirstOrDefaultAsync();
 
         }
+       public Task<List<PostData>> GetPostDataAllAsync()
+        {
+            return _database.Table<PostData>().ToListAsync();
+                    }
+      
         public Task<int> SavePostDataAsync(PostData postData)
         {
             return _database.InsertAsync(postData);
