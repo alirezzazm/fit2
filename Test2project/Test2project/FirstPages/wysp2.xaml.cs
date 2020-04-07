@@ -49,7 +49,7 @@ namespace Test2project.FirstPages
                 App.Database.SavePersonAsync(new Person
                 {
                     Name = nameandfamily.Text,
-                    Tel = shomare.Text,
+                    
                     Email = email.Text,
                     Age = age.Text,
                     Height = qad.Text,

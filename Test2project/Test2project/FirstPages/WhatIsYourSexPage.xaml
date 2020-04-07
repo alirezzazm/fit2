@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Test2project.FirstPages.WhatIsYourSexPage" BackgroundColor="White"
+             x:Class="Test2project.FirstPages.WhatIsYourSexPage" 
+             BackgroundColor="White"
              
              xmlns:local="clr-namespace:Test2project;assembly=Test2project">
     <StackLayout>
@@ -14,6 +15,7 @@
             <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                 <Image Source="box.png"  />
                 <Entry
+                     
                     x:Name="shomare"
                     HorizontalTextAlignment="Center"
                     VerticalTextAlignment="Center"

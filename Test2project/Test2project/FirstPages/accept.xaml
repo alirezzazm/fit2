@@ -9,7 +9,8 @@
         <Grid VerticalOptions="StartAndExpand">
             <Image
             Source="background.png" />
-            <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <StackLayout>
+                <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                 <Image Source="box.png"  />
                 <Entry 
                     
@@ -24,6 +25,16 @@
                        HorizontalOptions="CenterAndExpand"
                        />
             </Grid>
+                <StackLayout VerticalOptions="EndAndExpand" Margin="0,0,0,-200">
+                     <Label 
+                         Text="{Binding number}"
+                         x:Name="Labelfaile"
+                TextColor="Black" FontSize="Medium" VerticalTextAlignment="Center"
+                    HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+               
+            </StackLayout>
+            
            
 
 
@@ -50,6 +61,7 @@
                                           NumberOfTapsRequired="1"/>
                 </Label.GestureRecognizers>
             </Label>
+           
         </Grid>
 
     </StackLayout>
