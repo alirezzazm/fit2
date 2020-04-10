@@ -16,7 +16,8 @@ namespace Test2project.FirstPages
         {
             InitializeComponent();
         }
-       public void Accept(object sender,EventArgs e)
+       
+       public async void Accept(object sender,EventArgs e)
         {
             var code = taed1.Text;
             var codepatern= "^[0-9]*$";
@@ -24,15 +25,22 @@ namespace Test2project.FirstPages
 
             if(Regex.IsMatch(code, codepatern))
             {
-                Navigation.PushModalAsync(new wysp2());
+                await Navigation.PushModalAsync(new wysp2());
+                taed1.Text = string.Empty;
             }
              
             
 
             else
             {
-                taed1.Text = "";
+                Person person = await App.Database.GetPeopleAsync();
+              
+                taed1.BackgroundColor = Color.Red;
+                taed1.PlaceholderColor = Color.Black;
+                
                 taed1.Placeholder = "کد اشتباه";
+                taed1.Text = string.Empty;
+                Labelfaile.Text = person.Tel + "این شماره درست؟";
             }
                
 

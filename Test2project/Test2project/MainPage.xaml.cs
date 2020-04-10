@@ -189,8 +189,11 @@ namespace Test2project
               
               foreach( PostData creatstack1 in postData)
                 {
+                    
 
                     stackpost2.Children.Add(stackpost);
+                    
+                   
                    
 
                 }

@@ -36,7 +36,7 @@ namespace Test2project
         {
             InitializeComponent();
 
-            MainPage = new Post1();
+            MainPage = new WhatIsYourSexPage();
            
           
         }

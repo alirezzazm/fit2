@@ -25,9 +25,11 @@ namespace Test2project.FirstPages
 
         public void NextPage(object sender, EventArgs e)
         {
+          ;
             //var fit = (Fit)BindingContext;
             //fit.Date = DateTime.UtcNow;
             //await App.DataBase.SaveFitAsync(fit);
+          
             var phone = shomare.Text;
             var phonepatern= "^(0|/+98)?([ ]|,|-|[()]){0,2}9[0|1|2|3|4]([ ]|,|-|[()]){0,3}(?:[0-9]([ ]|,|-|[()]){0,2}){8}$";
 
@@ -35,11 +37,26 @@ namespace Test2project.FirstPages
             if (Regex.IsMatch(phone, phonepatern))
             {
                 Navigation.PushModalAsync(new accept());
+                foreach( var number in  phone)
+                {
+                    App.Database.SavePersonAsync(new Person
+                    {
+                        Tel = shomare.Text,
+                    });
+                }
+                shomare.Text= string.Empty;
             }
 
             else
             {
                 kodetaed.Text = "شماره اشتباه";
+                shomare.BackgroundColor = Color.Red;
+                shomare.PlaceholderColor = Color.Black;
+                shomare.Placeholder = "دوباره امتحان کنید";
+                shomare.Text = string.Empty;
+                
+               
+                 
             }
 
 
