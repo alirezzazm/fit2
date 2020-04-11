@@ -36,7 +36,7 @@ namespace Test2project
         {
             InitializeComponent();
 
-            MainPage = new WhatIsYourSexPage();
+            MainPage = new wysp2();
            
           
         }

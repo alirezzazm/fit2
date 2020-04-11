@@ -4,8 +4,12 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Test2project.FirstPages.wysp2">
-    <StackLayout >
+             x:Class="Test2project.FirstPages.wysp2"
+             >
+   
+    <StackLayout x:Name="Safe1"
+                 >
+      
         <Grid VerticalOptions="StartAndExpand"
               x:Name="Grid1">
             <Image
@@ -23,18 +27,18 @@
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="imagetab"/>
                     </Image.GestureRecognizers>
                 </Image>
-                <Image Source="belavecopy.png" WidthRequest="10" HeightRequest="10" Margin="0,60,60,0">
+                <!--<Image Source="belavecopy.png" WidthRequest="10" HeightRequest="10" Margin="0,60,60,0">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="imagetab"/>
                     </Image.GestureRecognizers>
 
-                </Image>
+                </Image>-->
             
 </Grid>
             <StackLayout VerticalOptions="CenterAndExpand">
               
               
-                <Grid>
+                <Grid Padding="20,0,20,0">
                 <Image Source="box.png"  />
                    
                
@@ -45,29 +49,27 @@
                        Keyboard="Text" 
                       HorizontalTextAlignment="Center"
                              VerticalTextAlignment="Center"
-                             
+                        MaxLength="20"
                        Placeholder="نام و نام خانوادگی" 
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand"
+                       
                        
                               />
                     
             </Grid>
-                   <Grid>
+                <Grid Padding="20,0,20,0">
                     <Image Source="box.png"  />
                     <Entry 
                         x:Name="shomare"
                         FontSize="Large"
-                       Keyboard="Telephone" 
+                       Keyboard="Text" 
                        MaxLength="11"
-                       Placeholder="شماره همراه" 
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand"
+                       Placeholder="نام کاربری" 
+                       
                            HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"
                        />
                 </Grid>
-                   <Grid>
+                <Grid  Padding="20,0,20,0">
                     <Image Source="box.png"  />
                     <Entry 
                         FontSize="Large" 
@@ -76,9 +78,9 @@
                        HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"
                            
+                       
                        Placeholder="ایمیل" 
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand"
+                       
                        />
                 </Grid>
          <StackLayout Orientation="Horizontal">
@@ -135,7 +137,7 @@
                             <Image Source="boxsmall.png" Margin="5,0" />
 
                             <Label Text="جنسیت"
-                                   
+                                   x:Name="jensiyatName"
                                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
                                 <!--<Label.FontFamily>
                                     <OnPlatform x:TypeArguments="x:String">
