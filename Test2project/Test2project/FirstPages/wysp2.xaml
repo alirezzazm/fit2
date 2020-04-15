@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:local="clr-namespace:Test2project.ViewEntry" xmlns:local1="clr-namespace:Test2project"
              mc:Ignorable="d"
              x:Class="Test2project.FirstPages.wysp2"
              >
@@ -13,7 +14,7 @@
         <Grid VerticalOptions="StartAndExpand"
               x:Name="Grid1">
             <Image
-            Source="background.png"  />
+            Source="background.png" HorizontalOptions="FillAndExpand" Aspect="Fill"  />
             
             <Grid  VerticalOptions="StartAndExpand"
                            HorizontalOptions="CenterAndExpand"
@@ -40,9 +41,9 @@
               
                 <Grid Padding="20,0,20,0">
                 <Image Source="box.png"  />
-                   
-               
-                    <Entry  
+
+
+                    <local1:MyEntry  
                         x:Name="nameandfamily"
                         FontSize="Large"  
                        
@@ -83,13 +84,13 @@
                        
                        />
                 </Grid>
-         <StackLayout Orientation="Horizontal">
+         <StackLayout Orientation="Horizontal" Padding="10,0,10,0">
                 <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
                         <Grid Margin="10,0">
                             <Image Source="boxsmall.png" Margin="5,0" >
                             
                         </Image>
-                            <Entry 
+                            <local1:MyEntry
                                 x:Name="age"
                                 
                                 Placeholder="سن"
@@ -98,7 +99,7 @@
                            VerticalTextAlignment="Center"
                                    Keyboard="Numeric"
                                    MaxLength="2"
-                                   VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                                    />
                         </Grid>
                         <Grid Margin="10,0">
                             <Image Source="boxsmall.png" Margin="5,0" >
@@ -111,7 +112,7 @@
                                    MaxLength="3"
                                    HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"
-                                   VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                                    />
                         </Grid>
                         <Grid Margin="10,0">
                             <Image Source="boxsmall.png" Margin="5,0" >
@@ -126,7 +127,7 @@
                                    MaxLength="2"
                                    HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"
-                                   VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
+                                   >
                                 
                             </Entry>
                         </Grid>
@@ -136,9 +137,11 @@
                             </Grid.GestureRecognizers>
                             <Image Source="boxsmall.png" Margin="5,0" />
 
-                            <Label Text="جنسیت"
+                            <Entry Placeholder="جنسیت"
+                                   IsReadOnly="False"
                                    x:Name="jensiyatName"
-                                   VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center">
                                 <!--<Label.FontFamily>
                                     <OnPlatform x:TypeArguments="x:String">
                                         <On Platform="iOS" Value="MarkerFelt-Thin" />
@@ -147,7 +150,7 @@
                                     </OnPlatform>
                                 </Label.FontFamily>-->
 
-                            </Label>
+                            </Entry>
                             
                         </Grid>
 

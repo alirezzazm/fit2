@@ -6,15 +6,16 @@
              mc:Ignorable="d"
              x:Class="Test2project.FirstPages.WhatIsYourSexPage" 
              BackgroundColor="White"
-             
-             xmlns:local="clr-namespace:Test2project;assembly=Test2project">
+            
+             xmlns:local="clr-namespace:Test2project.ViewEntry" 
+             xmlns:local1="clr-namespace:Test2project">
     <StackLayout>
         <Grid VerticalOptions="StartAndExpand">
              <Image
             Source="background.png" />
             <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                 <Image Source="box.png"  />
-                <Entry
+                <local1:MyEntry
                      
                     x:Name="shomare"
                     HorizontalTextAlignment="Center"

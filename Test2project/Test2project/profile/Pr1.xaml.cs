@@ -20,7 +20,7 @@ namespace Test2project.profile
         public Pr1()
         {
             InitializeComponent();
-            
+             
             
         }
 

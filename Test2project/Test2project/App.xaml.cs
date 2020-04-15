@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using Test2project;
 using Xamarin.Forms.Xaml;
+using Test2project.Setting;
 
 namespace Test2project
 {

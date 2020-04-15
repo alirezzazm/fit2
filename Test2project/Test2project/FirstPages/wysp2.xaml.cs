@@ -26,9 +26,7 @@ namespace Test2project.FirstPages
         {
             
             InitializeComponent();
-
-
-            
+           
         }
         public async void  jensiyat(object sender, EventArgs e)
         {
@@ -166,7 +164,7 @@ namespace Test2project.FirstPages
                 var stream = file.GetStream();
                 file.Dispose();
                 return stream;
-                isOpen = true;
+                
             });
 
 
@@ -201,7 +199,7 @@ namespace Test2project.FirstPages
                 var stream = file.GetStream();
                 file.Dispose();
                 return stream;
-                isOpen = true;
+                
             });
 
         }

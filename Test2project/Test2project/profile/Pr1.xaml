@@ -2,12 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:local="clr-namespace:Test2project.ViewEntry" xmlns:local1="clr-namespace:Test2project.ViewEntry" xmlns:local2="clr-namespace:Test2project"
              mc:Ignorable="d"
              x:Class="Test2project.profile.Pr1">
     <ScrollView>
         
-    
+     
     <StackLayout>
         <StackLayout>
             <Grid>
@@ -38,8 +40,7 @@
                                 HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"
                                 Text="{Binding Name}"
-                                 VerticalOptions="StartAndExpand"
-                                                HorizontalOptions="Center"/>
+                                 />
 
                         </Grid>
 
@@ -55,8 +56,7 @@
                                Text="{Binding Age}"
                                 HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"
-                                 VerticalOptions="StartAndExpand"
-                                HorizontalOptions="CenterAndExpand"/>
+                                />
 
                         </Grid>
                         
@@ -70,23 +70,26 @@
                            Aspect="AspectFill"
                        VerticalOptions="StartAndExpand"
                            />
-                    <Grid>
+                        <Grid VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" 
+                              Padding="20,0,20,0">
                         <Image
                             Source="box.png"/>
-                        <Entry
+                            <Entry
                             x:Name="shomare1"
                            VerticalTextAlignment="Center"
                             Text="{Binding Tel}"
                             HorizontalTextAlignment="Center"
-                            HorizontalOptions="CenterAndExpand"/>
+                           />
 
                     </Grid>
-                    <Grid>
+                        <Grid VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" 
+                              Padding="20,0,20,50"
+                              >
                         <Image
                             Source="box.png"/>
-                        <Entry
+                        <local2:MyEntry
                             x:Name="email1"
-                            HorizontalOptions="CenterAndExpand"
+                           
                             Text="{Binding Email}"
                             HorizontalTextAlignment="Center"
                             
@@ -107,34 +110,35 @@
                     <Grid HorizontalOptions="CenterAndExpand" Margin="20">
                         <Image
                             Source="BlueBox.png"/>
-                        <Entry
+                        <local2:MyEntry 
                             x:Name="qad1"
                             Text="{Binding Height}"
-                            HorizontalOptions="CenterAndExpand"
+                           
                             HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"/>
                     </Grid>
                     <Grid HorizontalOptions="CenterAndExpand" Margin="20">
                         <Image
                             Source="BlueBox.png"/>
-                        <Entry
+                            <local2:MyEntry
                             x:Name="vazn1"
                             Text="{Binding Weight}"
-                            HorizontalOptions="CenterAndExpand"
+                           
                             HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"/>
                     </Grid>
                    
 
+                    
                 </StackLayout>
                 <StackLayout>
-                     <Grid>
+                     <Grid Padding="20,0,20,0">
                     <Image
                             Source="BlueBoxBig"/>
-                    <Entry
+                            <local2:MyEntry
                         x:Name="esm"
                         Text="{Binding Name}"
-                        HorizontalOptions="Center"
+                        
                         HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"/>
                 </Grid>
