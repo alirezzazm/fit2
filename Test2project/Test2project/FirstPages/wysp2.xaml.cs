@@ -163,8 +163,10 @@ namespace Test2project.FirstPages
             {
                 var stream = file.GetStream();
                 file.Dispose();
+                display.IsVisible = false;
+
                 return stream;
-                
+               
             });
 
 
@@ -198,8 +200,10 @@ namespace Test2project.FirstPages
                
                 var stream = file.GetStream();
                 file.Dispose();
+                display.IsVisible = false;
                 return stream;
-                
+              
+
             });
 
         }

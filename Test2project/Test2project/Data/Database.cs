@@ -22,7 +22,7 @@ namespace Test2project
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Person>().Wait();
             
-            _database.CreateTableAsync<PostData>().Wait();
+            
         }
 
         
@@ -38,21 +38,10 @@ namespace Test2project
             return _database.InsertAsync(person);
         }
 
-        public Task<PostData> GetPostDataAsync()
-        {
-            return _database.Table<PostData>().FirstOrDefaultAsync();
-
-        }
-       public Task<List<PostData>> GetPostDataAllAsync()
-        {
-            return _database.Table<PostData>().ToListAsync();
-                    }
+       
+       
       
-        public Task<int> SavePostDataAsync(PostData postData)
-        {
-            return _database.InsertAsync(postData);
-        }
-
+       
 
     }
 }

@@ -13,6 +13,13 @@ namespace Test2project
         
         public string Mozoe { get; set; }
 
+        public string ImagePost { get; set; }
 
+        public string ImageProfile { get; set; }
+
+        public string NameContact { get; set; }
+        public string Like { get; set; }
+        public string Comment { get; set; }
+        
     }
 }

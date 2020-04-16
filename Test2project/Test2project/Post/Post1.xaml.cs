@@ -40,7 +40,7 @@ namespace Test2project.Post
 
         public async  void post(object sender, EventArgs e)
         {
-          await  Navigation.PushModalAsync(new MainPage());
+            await Navigation.PushModalAsync(new MainPage());
 
             if (!string.IsNullOrWhiteSpace(mozoe.Text)
                 && string.IsNullOrWhiteSpace(tamrin.Text))
