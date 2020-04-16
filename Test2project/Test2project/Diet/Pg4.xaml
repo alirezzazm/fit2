@@ -2,9 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:ViewModels="clr-namespace:Test2project.Models"
              mc:Ignorable="d"
              x:Class="Test2project.Diet.Pg4">
+    <ContentPage.BindingContext>
+        <ViewModels:DietModels/>
+    </ContentPage.BindingContext>
     <StackLayout>
         <Grid>
             <StackLayout>
@@ -30,7 +34,7 @@
                     </Image>
             <Label
                  Margin="20,20,0,10"
-                Text="تخم مرغ پخته "
+                Text="{Binding NameDiet}"
                 VerticalOptions="StartAndExpand" 
                            HorizontalOptions="CenterAndExpand"/>
             <Label
@@ -40,7 +44,7 @@
                            HorizontalOptions="EndAndExpand"/>
         </StackLayout>
                 <Image
-                    Source="Bigegg.png" Aspect="AspectFill"/>
+                    Source="{Binding ImageDiet}" Aspect="AspectFill"/>
                 <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
                     <Grid VerticalOptions="StartAndExpand" Padding="10,0,10,0">
                         <Image Source="BoxDiet.png"/>
@@ -145,7 +149,7 @@
                      
                    /> 
                 <Label
-                    Text="تخم مرغ دارای پروتیین فراوانی هست" VerticalOptions="CenterAndExpand"
+                    Text="{Binding PropertiesDiet}" VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"/>
             </Grid>
             <Grid  IsVisible="False"

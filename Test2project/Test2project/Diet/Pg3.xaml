@@ -2,9 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:ViewModels="clr-namespace:Test2project.Models"
              mc:Ignorable="d"
              x:Class="Test2project.Diet.Pg3">
+    <ContentPage.BindingContext>
+        <ViewModels:DietModels/>
+    </ContentPage.BindingContext>
     <StackLayout>
          <Grid>
         <Image
@@ -84,62 +88,65 @@
          <ScrollView>
             <StackLayout Orientation="Horizontal">
                 <StackLayout>
-                    <StackLayout Orientation="Vertical" Margin="50,10,0,0">
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer
+                    <ListView
+                         HasUnevenRows="True"
+              ItemsSource="{Binding DietModels}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+
+                                    <StackLayout Orientation="Vertical" Margin="50,10,0,0">
+                                        <StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer
                                 NumberOfTapsRequired="1"
                                 Tapped="NextPg4"/>
-                        </StackLayout.GestureRecognizers>
-                        <Image
-                            Source="egg.png"/>
-                        <Label
-                            Text="تخم مرغ پخته" VerticalOptions="CenterAndExpand"
+                                        </StackLayout.GestureRecognizers>
+                                        <Image
+                            Source="{Binding ImageDiet}"/>
+                                        <Label
+                            Text="{Binding NameDiet}" VerticalOptions="CenterAndExpand"
                             HorizontalOptions="CenterAndExpand"/>
 
-                    </StackLayout>
-                    <StackLayout Orientation="Vertical" Margin="50,10,0,0">
-                        <Image
-                            Source="egg.png"/>
-                        <Label
-                            Text="تخم مرغ پخته" VerticalOptions="CenterAndExpand"
-                            HorizontalOptions="CenterAndExpand"/>
+                                    </StackLayout>
 
-                    </StackLayout>
-                    <StackLayout Orientation="Vertical" Margin="50,10,0,0">
-                        <Image
-                            Source="egg.png"/>
-                        <Label
-                            Text="تخم مرغ پخته" VerticalOptions="CenterAndExpand"
-                            HorizontalOptions="CenterAndExpand"/>
+                                </ViewCell>
+                            </DataTemplate>
+                            
+                        </ListView.ItemTemplate>
+                           
 
-                    </StackLayout>
+                    </ListView>
+                   
+                 
 
                 </StackLayout>
+                
                 <StackLayout>
-                    <StackLayout Orientation="Vertical" Margin="50,10,0,0">
-                        <Image
-                            Source="egg.png"/>
-                        <Label
-                            Text="تخم مرغ پخته" VerticalOptions="CenterAndExpand"
+                    <ListView
+                         HasUnevenRows="True"
+              ItemsSource="{Binding DietModels}">
+                        <ListView.ItemTemplate>
+                        <DataTemplate>
+                        <ViewCell>
+                                    <StackLayout Orientation="Vertical" Margin="50,10,0,0">
+                                        <Image
+                            Source="{Binding ImageDiet}"/>
+                                        <Label
+                            Text="{Binding NameDiet}" VerticalOptions="CenterAndExpand"
                             HorizontalOptions="CenterAndExpand"/>
 
-                    </StackLayout>
-                    <StackLayout Orientation="Vertical" Margin="50,10,0,0">
-                        <Image
-                            Source="egg.png"/>
-                        <Label
-                            Text="تخم مرغ پخته" VerticalOptions="CenterAndExpand"
-                            HorizontalOptions="CenterAndExpand"/>
+                                    </StackLayout>
 
-                    </StackLayout>
-                    <StackLayout Orientation="Vertical" Margin="50,10,0,0">
-                        <Image
-                            Source="egg.png"/>
-                        <Label
-                            Text="تخم مرغ پخته" VerticalOptions="CenterAndExpand"
-                            HorizontalOptions="CenterAndExpand"/>
-
-                    </StackLayout>
+                                </ViewCell>
+                    </DataTemplate>
+                    </ListView.ItemTemplate>
+                        
+                    </ListView>
+                    
+                    
+                    
+                    
+                    
 
                 </StackLayout>
 
