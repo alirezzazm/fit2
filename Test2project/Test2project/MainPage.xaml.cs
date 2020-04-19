@@ -11,6 +11,7 @@ using Test2project.Post;
 using Test2project.Setting;
 using Test2project.Diet;
 using Test2project.Data;
+using Test2project.Models;
 using SQLite;
 using SQLitePCL;
 

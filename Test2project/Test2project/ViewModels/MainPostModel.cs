@@ -31,13 +31,13 @@ namespace Test2project.ViewModels
         }
         public ICommand SendTodoCommand => new Command(async () =>
         {
-             SelectedTodo.UpdatedAt = DateTime.UtcNow;
-            await _dataServicepost.PostData(SelectedTodo);
+            // SelectedTodo.UpdatedAt = DateTime.UtcNow;
+            //await _dataServicepost.PostData(SelectedTodo);
         });
         public MainPostModel()
         {
-            SelectedTodo = new PostData();
-            GetPostData();
+            //SelectedTodo = new PostData();
+            //GetPostData();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
