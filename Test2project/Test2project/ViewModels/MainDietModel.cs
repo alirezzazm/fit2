@@ -32,12 +32,12 @@ namespace Test2project.ViewModels
         public ICommand SendTodoCommand => new Command(async () =>
         {
             // SelectedTodo.UpdatedAt = DateTime.UtcNow;
-            await _dataServicediet.PostDietModels(SelectedTodo);
+          //  await _dataServicediet.PostDietModels(SelectedTodo);
         });
         public MainDietModel()
         {
-            SelectedTodo = new DietModels();
-            GetDietModels();
+         //   SelectedTodo = new DietModels();
+          //  GetDietModels();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

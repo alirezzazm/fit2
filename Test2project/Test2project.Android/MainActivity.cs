@@ -24,18 +24,18 @@ namespace Test2project.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
-            CrossCurrentActivity.Current.Init(this, bundle);
+           CrossCurrentActivity.Current.Init(this, bundle);
             Xamarin.Essentials.Platform.Init(this, bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }
-     //  public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
-       // {
-         //   PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+       public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+        {
+            PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
-           //Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
-           //base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        //}
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
     }
 }
