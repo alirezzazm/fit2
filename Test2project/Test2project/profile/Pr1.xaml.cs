@@ -9,6 +9,7 @@ using SQLitePCL;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Test2project;
+using Test2project.Data;
 
 
 namespace Test2project.profile

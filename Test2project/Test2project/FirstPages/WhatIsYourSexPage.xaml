@@ -6,8 +6,6 @@
              mc:Ignorable="d"
              x:Class="Test2project.FirstPages.WhatIsYourSexPage" 
              BackgroundColor="White"
-            
-             xmlns:local="clr-namespace:Test2project.ViewEntry" 
              xmlns:local1="clr-namespace:Test2project">
     <StackLayout>
         <Grid VerticalOptions="StartAndExpand">
@@ -25,7 +23,12 @@
                     MaxLength="11"
                     />
             </Grid>
-            
+            <Button
+                Text="ClearDataBase"
+                Clicked="Button_Clicked"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Margin="0,500,0,0"/>
 
         </Grid>
         

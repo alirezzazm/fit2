@@ -132,10 +132,12 @@
                             </Entry>
                         </Grid>
                         <Grid Margin="10,0">
-                           
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="jensiyat"/>
+                            </Grid.GestureRecognizers>
                             <Image Source="boxsmall.png" Margin="5,0" />
 
-                            <Entry Placeholder="جنسیت" 
+                            <Entry Text="جنسیت" 
                                    IsEnabled="False"
                                    x:Name="jensiyatName"
                                    HorizontalTextAlignment="Center"
@@ -147,9 +149,7 @@
                                         <On Platform="UWP" Value="Assets/Fonts/IRANIANSANS.ttf" />
                                     </OnPlatform>
                                 </Label.FontFamily>-->
-                                <Entry.GestureRecognizers>
-                                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="jensiyat"/>
-                                </Entry.GestureRecognizers>
+                                
 
                             </Entry>
                             

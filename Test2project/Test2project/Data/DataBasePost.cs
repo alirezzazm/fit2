@@ -19,7 +19,7 @@ namespace Test2project.Data
 
 
 
-        public Task<PostData> GetPeopleAsync()
+        public Task<PostData> GetPostDataAllasync()
         {
             return databasepost.Table<PostData>().FirstOrDefaultAsync();
 

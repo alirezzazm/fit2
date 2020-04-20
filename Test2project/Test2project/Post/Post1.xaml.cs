@@ -38,29 +38,29 @@ namespace Test2project.Post
             return true;
         }
 
-        public async void post(object sender, EventArgs e)
-        {
+        //public async void post(object sender, EventArgs e)
+        //{
            
-            await Navigation.PushModalAsync(new MainPage());
+        //    await Navigation.PushModalAsync(new MainPage());
 
-            if (!string.IsNullOrWhiteSpace(mozoe.Text)
-                && string.IsNullOrWhiteSpace(tamrin.Text))
-            {
-                await App.Database.SavePostDataAsync(new PostData
-                {
-                    Mozoe = mozoe.Text,
+        //    if (!string.IsNullOrWhiteSpace(mozoe.Text)
+        //        && string.IsNullOrWhiteSpace(tamrin.Text))
+        //    {
+        //        await App.Databasepost.SavePersonAsync(new PostData
+        //        {
+        //            Mozoe = mozoe.Text,
 
-                    //Tamrin=tamrin.Text,
+        //            //Tamrin=tamrin.Text,
 
-                });
+        //        });
 
-                mozoe.Text = string.Empty;
-                tamrin.Text = string.Empty;
+        //        mozoe.Text = string.Empty;
+        //        tamrin.Text = string.Empty;
 
 
 
-            }
+        //    }
 
-        }
+        //}
     }
 }
