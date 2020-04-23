@@ -38,9 +38,9 @@ namespace Test2project
             return _database.InsertAsync(person);
         }
 
-        public Task<int> UpdatePersonAsync(Person person)
+        public async Task<int> UpdatePersonAsync(Person person)
         {
-            return _database.UpdateAsync(person);
+            return await _database.UpdateAsync(person);
         }
         public Task<int> DeletePersonAsync(Person person)
         {

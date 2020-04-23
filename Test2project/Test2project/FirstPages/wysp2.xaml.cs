@@ -37,18 +37,10 @@ namespace Test2project.FirstPages
         }
         public void MainPage(object sender, EventArgs e)
         {
-            Person person = new Person();
+            Person person = App.Database.GetPeopleAsync().Result;
+
            
 
-            if (!string.IsNullOrWhiteSpace(nameandfamily.Text)
-                && !string.IsNullOrWhiteSpace(shomare.Text)
-                && !string.IsNullOrWhiteSpace(email.Text)
-                 && !string.IsNullOrWhiteSpace(age.Text)
-                 && !string.IsNullOrWhiteSpace(qad.Text)
-                 && !string.IsNullOrWhiteSpace(vazn.Text)
-                 && !string.IsNullOrWhiteSpace(file)
-                 && !string.IsNullOrWhiteSpace(jensiyatName.Text))
-            {
                 person.Name = nameandfamily.Text;
                 person.Sex = jensiyatName.Text;
                 person.Email = email.Text;
@@ -86,7 +78,7 @@ namespace Test2project.FirstPages
                
 
 
-            }
+           
 
 
             Navigation.PushModalAsync(new MainPage());
