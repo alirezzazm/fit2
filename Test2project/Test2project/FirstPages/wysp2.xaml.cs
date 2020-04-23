@@ -14,9 +14,6 @@ using Plugin.Permissions;
 
 
 
-
-
-
 using System.IO;
 
 namespace Test2project.FirstPages
@@ -40,7 +37,8 @@ namespace Test2project.FirstPages
         }
         public void MainPage(object sender, EventArgs e)
         {
-            
+            Person person = new Person();
+           
 
             if (!string.IsNullOrWhiteSpace(nameandfamily.Text)
                 && !string.IsNullOrWhiteSpace(shomare.Text)
@@ -51,21 +49,33 @@ namespace Test2project.FirstPages
                  && !string.IsNullOrWhiteSpace(file)
                  && !string.IsNullOrWhiteSpace(jensiyatName.Text))
             {
-                App.Database.SavePersonAsync(new Person
-                {
-                    Name = nameandfamily.Text,
-                    Sex =jensiyatName.Text,
-                    Email = email.Text,
-                    Age = age.Text,
-                    Height = qad.Text,
-                    Weight = vazn.Text,
+                person.Name = nameandfamily.Text;
+                person.Sex = jensiyatName.Text;
+                person.Email = email.Text;
+                person.Age = age.Text;
+                person.Height = qad.Text;
+                person.Weight = vazn.Text;
+                person.Image = file;
+                App.Database.UpdatePersonAsync(person);
+
+                
+
+
+                //App.Database.SavePersonAsync(new Person
+                //{
+                //    Name = nameandfamily.Text,
+                //    Sex =jensiyatName.Text,
+                //    Email = email.Text,
+                //    Age = age.Text,
+                //    Height = qad.Text,
+                //    Weight = vazn.Text,
                   
-                    Image = file,
+                //    Image = file,
 
 
 
 
-                });
+                //});
 
                 nameandfamily.Text = string.Empty;
                 shomare.Text = string.Empty;
