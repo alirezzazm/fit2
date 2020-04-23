@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Test2project"
              mc:Ignorable="d"           
              x:Class="Test2project.Post.Post1"
             >
@@ -33,7 +33,7 @@
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer
                                 NumberOfTapsRequired="1"
-                                Tapped="post"/>
+                                /> <!--Tapped="post"-->
                         </Image.GestureRecognizers>
 
                     </Image>
@@ -62,7 +62,7 @@
                 <Grid VerticalOptions="FillAndExpand" Padding="50,0,50,0" >
                     <Image Source="box.png" 
                           Aspect="AspectFill" />
-                    <Entry 
+                    <local:MyEntry
                         x:Name="mozoe"
                         Placeholder="موضوع" HorizontalTextAlignment="Center"
                            Keyboard="Chat"  />
@@ -70,7 +70,7 @@
                 <Grid VerticalOptions="FillAndExpand" Padding="50,0,50,0" >
                     <Image Source="box.png" 
                           Aspect="AspectFill" />
-                    <Entry 
+                    <local:MyEntry
                         x:Name="tamrin"
                         VerticalOptions="FillAndExpand"
                            Placeholder="تمرینت چی بوده"

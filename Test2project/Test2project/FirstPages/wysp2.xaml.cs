@@ -14,6 +14,9 @@ using Plugin.Permissions;
 
 
 
+
+
+
 using System.IO;
 
 namespace Test2project.FirstPages
@@ -21,22 +24,23 @@ namespace Test2project.FirstPages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class wysp2 : ContentPage
     {
+       
         public wysp2()
         {
             
             InitializeComponent();
-
+           
+        }
+        public async void  jensiyat(object sender, EventArgs e)
+        {
+            var response = await DisplayActionSheet("نوع جنسیت", "", "", "زن", "مرد"); 
+           jensiyatName.Text = response;
 
             
         }
-        public void jensiyat( object sender,EventArgs e)
-        {
-
-            DisplayActionSheet("نوع جنسیت", "مرد", "زن");
-        }
         public void MainPage(object sender, EventArgs e)
         {
-            var ax = axprofile.Source.ToString();
+            
 
             if (!string.IsNullOrWhiteSpace(nameandfamily.Text)
                 && !string.IsNullOrWhiteSpace(shomare.Text)
@@ -44,12 +48,13 @@ namespace Test2project.FirstPages
                  && !string.IsNullOrWhiteSpace(age.Text)
                  && !string.IsNullOrWhiteSpace(qad.Text)
                  && !string.IsNullOrWhiteSpace(vazn.Text)
-                 && !string.IsNullOrWhiteSpace(file))
+                 && !string.IsNullOrWhiteSpace(file)
+                 && !string.IsNullOrWhiteSpace(jensiyatName.Text))
             {
                 App.Database.SavePersonAsync(new Person
                 {
                     Name = nameandfamily.Text,
-                    
+                    Sex =jensiyatName.Text,
                     Email = email.Text,
                     Age = age.Text,
                     Height = qad.Text,
@@ -78,29 +83,31 @@ namespace Test2project.FirstPages
 
         }
 
-
+        
 
 
         private bool isOpen = false;
-        private string file;
+        public  string file;
 
         private async void imagetab(object sender, EventArgs e)
         {
 
           //  Grid1.Opacity == "0.5";
             
-            
+
+
             if (isOpen == false)
             {
                 isOpen = true;
                 //Scale to smaller  
-                await((Image)sender).ScaleTo(0.1, 50, Easing.SinIn);
+                await((Image)sender).ScaleTo(1, 50, Easing.SinIn);
                 //Wait a moment  
                 
                 //Scale to normal  
                 await((Image)sender).ScaleTo(1, 50, Easing.SinIn);
 
                 display.IsVisible = false;
+              
 
             }
             else
@@ -110,11 +117,11 @@ namespace Test2project.FirstPages
                 isOpen = false;
                 //await scar
                 //Scale to smaller  
-                await((Image)sender).ScaleTo(0.1, 50, Easing.Linear);
+                await((Image)sender).ScaleTo(1, 50, Easing.Linear);
                 //Wait a moment  
                 
                 //Scale to normal  
-                await((Image)sender).ScaleTo(1, 50, Easing.Linear);
+                await((Image)sender).ScaleTo(1, 50,Easing.SpringIn);
 
                 display.IsVisible = true;
 
@@ -140,10 +147,10 @@ namespace Test2project.FirstPages
                 new StoreCameraMediaOptions
                 {
                     Directory = "Test",
-                    SaveToAlbum = true,
+                    SaveToAlbum = false,
                     CompressionQuality = 75,
                     CustomPhotoSize = 50,
-                    PhotoSize = PhotoSize.MaxWidthHeight,
+                    PhotoSize = PhotoSize.Custom,
                     MaxWidthHeight = 2000,
                     DefaultCamera = CameraDevice.Front
 
@@ -159,7 +166,10 @@ namespace Test2project.FirstPages
             {
                 var stream = file.GetStream();
                 file.Dispose();
+                display.IsVisible = false;
+
                 return stream;
+               
             });
 
 
@@ -179,6 +189,7 @@ namespace Test2project.FirstPages
             var file = await Plugin.Media.CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
             {
                 PhotoSize = Plugin.Media.Abstractions.PhotoSize.Medium,
+                
 
             });
             
@@ -192,7 +203,10 @@ namespace Test2project.FirstPages
                
                 var stream = file.GetStream();
                 file.Dispose();
+                display.IsVisible = false;
                 return stream;
+              
+
             });
 
         }

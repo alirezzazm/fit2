@@ -2,9 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:ViewModels="clr-namespace:Test2project.Models"
              mc:Ignorable="d"
              x:Class="Test2project.Diet.Pg4">
+    <ContentPage.BindingContext>
+        <ViewModels:DietModels/>
+    </ContentPage.BindingContext>
     <StackLayout>
         <Grid>
             <StackLayout>
@@ -30,7 +34,7 @@
                     </Image>
             <Label
                  Margin="20,20,0,10"
-                Text="تخم مرغ پخته "
+                Text="{Binding NameDiet}"
                 VerticalOptions="StartAndExpand" 
                            HorizontalOptions="CenterAndExpand"/>
             <Label
@@ -40,22 +44,20 @@
                            HorizontalOptions="EndAndExpand"/>
         </StackLayout>
                 <Image
-                    Source="Bigegg.png" Aspect="AspectFill"/>
+                    Source="{Binding ImageDiet}" Aspect="AspectFill"/>
                 <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
                     <Grid VerticalOptions="StartAndExpand" Padding="10,0,10,0">
                         <Image Source="BoxDiet.png"/>
                         <Entry
                             Placeholder="گرم"
-                            VerticalOptions="CenterAndExpand"
-                            HorizontalOptions="CenterAndExpand"
+                            VerticalTextAlignment="Center"
                             HorizontalTextAlignment="Center"/>
                     </Grid>
                     <Grid Padding="10,0,10,0" VerticalOptions="StartAndExpand">
                         <Image Source="BoxDiet.png"/>
                         <Entry
                             Placeholder="عدد"
-                            VerticalOptions="CenterAndExpand"
-                            HorizontalOptions="CenterAndExpand"
+                            VerticalTextAlignment="Center"
                             HorizontalTextAlignment="Center"/>
                     </Grid>
                 
@@ -67,8 +69,8 @@
                             Source="BoxL.png"/>
                         <Label
                             Text="نیاز روزانه"
-                            VerticalOptions="CenterAndExpand"
-                            HorizontalOptions="CenterAndExpand"/>
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Center"/>
                     </Grid>
                     <Grid HorizontalOptions="CenterAndExpand" Margin="0,0,0,10"
                           Padding="10">
@@ -76,8 +78,8 @@
                             Source="BoxL.png"/>
                         <Label
                             Text="وزن(g)"
-                            VerticalOptions="CenterAndExpand"
-                            HorizontalOptions="CenterAndExpand"/>
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
                     </Grid>
                     
                 </StackLayout>
@@ -96,35 +98,35 @@
                     VerticalTextAlignment="Center"/>
             </Grid>
         </StackLayout>
-        <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal">
-            <Grid HorizontalOptions="StartAndExpand">
+                <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal">
+                    <Grid HorizontalOptions="StartAndExpand">
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer
                                 Tapped="mavad"
                                 NumberOfTapsRequired="1"/>
                         </Grid.GestureRecognizers>
-                <Image
+                        <Image
                     Source="BoxLeftDiet.png"/>
-                <Label
+                        <Label
                     Text="موادتشکیل دهنده"
                     HorizontalTextAlignment="Center"
                     VerticalTextAlignment="Center"/>
-            </Grid>
-            <Grid HorizontalOptions="EndAndExpand">
+                    </Grid>
+                    <Grid HorizontalOptions="EndAndExpand">
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer
                                 Tapped="khavas"
                                 NumberOfTapsRequired="1"/>
                         </Grid.GestureRecognizers>
-                <Image
+                        <Image
                     Source="BoxRightDiet"/>
-                <Label
+                        <Label
                     Text="خواص"
                     HorizontalTextAlignment="Center"
                     VerticalTextAlignment="Center"/>
-            </Grid>
-            
-        </StackLayout>
+                    </Grid>
+
+                </StackLayout>
             </StackLayout>
             <Grid
                  IsVisible="False"
@@ -147,7 +149,7 @@
                      
                    /> 
                 <Label
-                    Text="تخم مرغ دارای پروتیین فراوانی هست" VerticalOptions="CenterAndExpand"
+                    Text="{Binding PropertiesDiet}" VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"/>
             </Grid>
             <Grid  IsVisible="False"
@@ -253,7 +255,7 @@
                             HorizontalOptions="CenterAndExpand" >
                         <Button
                             Opacity="0.9"
-                            BackgroundColor="White"/>
+                            BackgroundColor="White"/>   
                         <Label
                             Text="مقدار آب"
                             HorizontalTextAlignment="End"

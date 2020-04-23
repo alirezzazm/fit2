@@ -75,6 +75,20 @@ namespace Test2project.FirstPages
 
         }
 
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            App.Database.DeletePersonAsync( new Person
+
+
+            {
+                Tel = shomare.Text,
+              
+
+
+            });
+            
+        }
+
         //private void Button_Clicked(object sender, EventArgs e)
         //{
         //    DisplayAlert("What's the value?","kg", "ok");

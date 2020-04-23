@@ -9,7 +9,7 @@ using Xamarin.Forms.Xaml;
 
 using SQLite;
 using SQLitePCL;
-
+using Test2project.Data;
 using Test2project;
 
 namespace Test2project.Post
@@ -17,7 +17,7 @@ namespace Test2project.Post
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Post1 : ContentPage
     {
-        
+       
 
         public Post1()
         {
@@ -38,28 +38,29 @@ namespace Test2project.Post
             return true;
         }
 
-        public async  void post(object sender, EventArgs e)
-        {
-          await  Navigation.PushModalAsync(new MainPage());
+        //public async void post(object sender, EventArgs e)
+        //{
+           
+        //    await Navigation.PushModalAsync(new MainPage());
 
-            if (!string.IsNullOrWhiteSpace(mozoe.Text)
-                && string.IsNullOrWhiteSpace(tamrin.Text))
-            {
-              await  App.Database.SavePostDataAsync(new PostData
-                {
-                    Mozoe=mozoe.Text,
-                      
-                    //Tamrin=tamrin.Text,
+        //    if (!string.IsNullOrWhiteSpace(mozoe.Text)
+        //        && string.IsNullOrWhiteSpace(tamrin.Text))
+        //    {
+        //        await App.Databasepost.SavePersonAsync(new PostData
+        //        {
+        //            Mozoe = mozoe.Text,
 
-                });
-                
-                mozoe.Text = string.Empty;
-                tamrin.Text = string.Empty;
+        //            //Tamrin=tamrin.Text,
 
-              
+        //        });
 
-            }
+        //        mozoe.Text = string.Empty;
+        //        tamrin.Text = string.Empty;
 
-        }
+
+
+        //    }
+
+        //}
     }
 }

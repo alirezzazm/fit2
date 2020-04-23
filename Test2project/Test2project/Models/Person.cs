@@ -12,6 +12,7 @@ namespace Test2project
         public int ID { get; set; }
         public string Name { get; set; }
 
+        public string Sex { get; set; }
         public string Email { get; set; }
         public string Tel { get; set; }
         public string Age { get; set; }

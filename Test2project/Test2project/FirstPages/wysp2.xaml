@@ -2,14 +2,19 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:local="clr-namespace:Test2project.ViewEntry" xmlns:local1="clr-namespace:Test2project"
              mc:Ignorable="d"
-             x:Class="Test2project.FirstPages.wysp2">
-    <StackLayout >
+             x:Class="Test2project.FirstPages.wysp2"
+             >
+   
+    <StackLayout x:Name="Safe1"
+                 >
+      
         <Grid VerticalOptions="StartAndExpand"
               x:Name="Grid1">
             <Image
-            Source="background.png"  />
+            Source="background.png" HorizontalOptions="FillAndExpand" Aspect="Fill"  />
             
             <Grid  VerticalOptions="StartAndExpand"
                            HorizontalOptions="CenterAndExpand"
@@ -23,51 +28,49 @@
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="imagetab"/>
                     </Image.GestureRecognizers>
                 </Image>
-                <Image Source="belavecopy.png" WidthRequest="10" HeightRequest="10" Margin="0,60,60,0">
+                <!--<Image Source="belavecopy.png" WidthRequest="10" HeightRequest="10" Margin="0,60,60,0">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="imagetab"/>
                     </Image.GestureRecognizers>
 
-                </Image>
+                </Image>-->
             
 </Grid>
             <StackLayout VerticalOptions="CenterAndExpand">
               
               
-                <Grid>
+                <Grid Padding="20,0,20,0">
                 <Image Source="box.png"  />
-                   
-               
-                    <Entry  
+
+
+                    <local1:MyEntry  
                         x:Name="nameandfamily"
                         FontSize="Large"  
                        
                        Keyboard="Text" 
                       HorizontalTextAlignment="Center"
                              VerticalTextAlignment="Center"
-                             
+                        MaxLength="20"
                        Placeholder="نام و نام خانوادگی" 
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand"
+                       
                        
                               />
                     
             </Grid>
-                   <Grid>
+                <Grid Padding="20,0,20,0">
                     <Image Source="box.png"  />
                     <Entry 
                         x:Name="shomare"
                         FontSize="Large"
-                       Keyboard="Telephone" 
+                       Keyboard="Text" 
                        MaxLength="11"
-                       Placeholder="شماره همراه" 
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand"
+                       Placeholder="نام کاربری" 
+                       
                            HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"
                        />
                 </Grid>
-                   <Grid>
+                <Grid  Padding="20,0,20,0">
                     <Image Source="box.png"  />
                     <Entry 
                         FontSize="Large" 
@@ -76,18 +79,18 @@
                        HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"
                            
+                       
                        Placeholder="ایمیل" 
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand"
+                       
                        />
                 </Grid>
-         <StackLayout Orientation="Horizontal">
+         <StackLayout Orientation="Horizontal" Padding="10,0,10,0">
                 <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
                         <Grid Margin="10,0">
                             <Image Source="boxsmall.png" Margin="5,0" >
                             
                         </Image>
-                            <Entry 
+                            <local1:MyEntry
                                 x:Name="age"
                                 
                                 Placeholder="سن"
@@ -96,7 +99,7 @@
                            VerticalTextAlignment="Center"
                                    Keyboard="Numeric"
                                    MaxLength="2"
-                                   VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                                    />
                         </Grid>
                         <Grid Margin="10,0">
                             <Image Source="boxsmall.png" Margin="5,0" >
@@ -109,7 +112,7 @@
                                    MaxLength="3"
                                    HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"
-                                   VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                                    />
                         </Grid>
                         <Grid Margin="10,0">
                             <Image Source="boxsmall.png" Margin="5,0" >
@@ -124,7 +127,7 @@
                                    MaxLength="2"
                                    HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center"
-                                   VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
+                                   >
                                 
                             </Entry>
                         </Grid>
@@ -134,9 +137,11 @@
                             </Grid.GestureRecognizers>
                             <Image Source="boxsmall.png" Margin="5,0" />
 
-                            <Label Text="جنسیت"
-                                   
-                                   VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
+                            <Entry Text="جنسیت" 
+                                   IsEnabled="False"
+                                   x:Name="jensiyatName"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center">
                                 <!--<Label.FontFamily>
                                     <OnPlatform x:TypeArguments="x:String">
                                         <On Platform="iOS" Value="MarkerFelt-Thin" />
@@ -144,8 +149,9 @@
                                         <On Platform="UWP" Value="Assets/Fonts/IRANIANSANS.ttf" />
                                     </OnPlatform>
                                 </Label.FontFamily>-->
+                                
 
-                            </Label>
+                            </Entry>
                             
                         </Grid>
 

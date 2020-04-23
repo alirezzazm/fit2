@@ -10,9 +10,12 @@ using Xamarin.Forms.PlatformConfiguration;
 using Test2project.Post;
 using Test2project.Setting;
 using Test2project.Diet;
-
+using Test2project.Data;
+using Test2project.Models;
+using Test2project;
 using SQLite;
 using SQLitePCL;
+
 
 
 
@@ -180,30 +183,31 @@ namespace Test2project
 
         protected override async void OnAppearing()
         {
-          var postData = await App.Database.GetPostDataAllAsync();
 
-            
-            
-            try 
-            {
-              
-              foreach( PostData creatstack1 in postData)
-                {
-                    
+            var amc = await App.Database.GetPeopleAsync();
 
-                    stackpost2.Children.Add(stackpost);
-                    
-                   
-                   
 
-                }
 
-            }
+            //try
+            //{
 
-            catch
-            {
-                mozoe1.Text = string.Empty;
-            }
+            //    foreach (Person creatstack1 in amc)
+            //    {
+
+
+            //        stackpost2.Children.Add(stackpost);
+
+
+
+
+            //    }
+
+            //}
+
+            //catch
+            //{
+            //    mozoe1.Text = string.Empty;
+            //}
 
         }
 
