@@ -11,7 +11,7 @@ namespace Test2project.DataService
 {
   public  class DataServicePost
     {
-        private string Url = "";
+        private string Url = "http://localhost/api/DietApis";
         public async Task<List<PostData>> GetPostData()
         {
 

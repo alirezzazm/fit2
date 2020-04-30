@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms1="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
              mc:Ignorable="d"
              x:Class="Test2project.Diet.Pg1">
     <StackLayout>
@@ -64,7 +65,9 @@
                     <Grid >
                         <Image
                             Source="BoxX.png" />
-                        <!--<ChartView/>-->
+                        <StackLayout>
+                            <forms1:ChartView x:Name="Chart1" HeightRequest="150"/>
+                        </StackLayout>
                     </Grid>
                 </StackLayout>
                 

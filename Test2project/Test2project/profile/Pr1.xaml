@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-            xmlns:local1="clr-namespace:Test2project.ViewEntry" xmlns:local2="clr-namespace:Test2project"
+             xmlns:local2="clr-namespace:Test2project"
              mc:Ignorable="d"
              x:Class="Test2project.profile.Pr1">
     <ScrollView>

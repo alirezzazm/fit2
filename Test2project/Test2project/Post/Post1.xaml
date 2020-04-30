@@ -5,7 +5,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Test2project"
              mc:Ignorable="d"           
              x:Class="Test2project.Post.Post1"
+             xmlns:ViewModels="clr-namespace:Test2project.ViewModels"
             >
+    <ContentPage.BindingContext>
+        <ViewModels:MainPostModel/>
+    </ContentPage.BindingContext>
  
         <StackLayout>
              <Grid>
@@ -25,7 +29,7 @@
                     </Image>
                     <Image 
                         Margin="15,5,0,0"
-                        
+                        x:Name="axpost"
                         Source="post1.png"
                            VerticalOptions="StartAndExpand" 
                            HorizontalOptions="EndAndExpand">
@@ -33,7 +37,9 @@
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer
                                 NumberOfTapsRequired="1"
-                                /> <!--Tapped="post"-->
+                                Tapped="post"
+                                Command="{Binding SendTodoCommand}"
+                                /> 
                         </Image.GestureRecognizers>
 
                     </Image>
@@ -43,9 +49,9 @@
                 </StackLayout>
                 <StackLayout  VerticalOptions="StartAndExpand">
                     <Grid >
-               
-               
-                <Image Source="empty.png"
+
+
+                        <Image Source="{Binding SelectedPost.ImagePost}"
                       HorizontalOptions="FillAndExpand"
                   
                        VerticalOptions="FillAndExpand"/>
@@ -54,20 +60,61 @@
                        
                        VerticalOptions="EndAndExpand" />
 
+                        <StackLayout VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand" Orientation="Horizontal"
+                         Padding="100"
+                         Margin="0,50,0,0"
+                         IsVisible="False"
+                         x:Name="display">
+                            <Grid>
+                                <Image Source="display.png"/>
+                                <Label
+                        Text="عکس گرفتن"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        TextColor="White"/>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer
+                            NumberOfTapsRequired="1"
+                            Tapped="axgereftan"/>
+                                </Grid.GestureRecognizers>
+                            </Grid>
+                            <Grid>
+                                <Image Source="display.png"/>
+                                <Label
+                        Text="گالری"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        TextColor="White"/>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer
+                            NumberOfTapsRequired="1"
+                            Tapped="gallery"/>
+                                </Grid.GestureRecognizers>
+                            </Grid>
 
 
-            </Grid>
+                        </StackLayout>
+
+                    </Grid>
+                    
             
                 </StackLayout>
+                
                 <Grid VerticalOptions="FillAndExpand" Padding="50,0,50,0" >
                     <Image Source="box.png" 
                           Aspect="AspectFill" />
                     <local:MyEntry
                         x:Name="mozoe"
+                        Text="{Binding SelectedPost.Mozoe}"
                         Placeholder="موضوع" HorizontalTextAlignment="Center"
                            Keyboard="Chat"  />
                 </Grid>
-                <Grid VerticalOptions="FillAndExpand" Padding="50,0,50,0" >
+                <Grid
+                    
+                    VerticalOptions="FillAndExpand" Padding="50,0,50,0" >
                     <Image Source="box.png" 
                           Aspect="AspectFill" />
                     <local:MyEntry
@@ -75,7 +122,8 @@
                         VerticalOptions="FillAndExpand"
                            Placeholder="تمرینت چی بوده"
                            HorizontalTextAlignment="Center"/>
-                </Grid></StackLayout>
+                </Grid>
+            </StackLayout>
             </Grid>
         </StackLayout>
 

@@ -36,19 +36,20 @@ namespace Test2project
                 
 
             }
-        } 
-        //public static DataBasePost Databasepost
-        //{
-        //    get
-        //    {
-        //        if (databasepost == null)
-        //        {
-        //            databasepost = new DataBasePost(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "people.db3"));
+        }
+        public static DataBasePost Databasepost
+        {
+            get
+            {
+                if (databasepost == null)
+                {
+                    databasepost = new DataBasePost(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "zamani.db3"));
 
-        //        }
-        //        return databasepost;
-        //    }
-            
+                }
+                return databasepost;
+            }
+        }
+
 
         //}
         //public static DataBaseDiet DataBaseDiet
@@ -59,12 +60,12 @@ namespace Test2project
         //        {
         //            databasediet = new DataBaseDiet(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "people.db3"));
 
-        //        }
-        //        return DataBaseDiet;
-        //    }
+            //        }
+            //        return DataBaseDiet;
+            //    }
 
 
-        //}
+            //}
 
 
         public App()

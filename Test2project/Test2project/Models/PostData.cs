@@ -8,6 +8,8 @@ namespace Test2project
 {
    public class PostData
     {
+        internal DateTime UpdatedAt;
+
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
         
@@ -20,6 +22,7 @@ namespace Test2project
         public string NameContact { get; set; }
         public string Like { get; set; }
         public string Comment { get; set; }
+         public string Tamrin { get; set; }
         
     }
 }

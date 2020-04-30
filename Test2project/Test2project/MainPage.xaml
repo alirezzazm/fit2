@@ -7,7 +7,11 @@
              xmlns:tabView="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
              mc:Ignorable="d"
              x:Class="Test2project.MainPage"
+              xmlns:ViewModels="clr-namespace:Test2project.ViewModels"
              >
+    <ContentPage.BindingContext>
+        <ViewModels:MainPostModel/>
+    </ContentPage.BindingContext>
 
     <ContentPage.Content >
         <Grid>
@@ -20,29 +24,35 @@
 
                             <ScrollView>
                                 <StackLayout x:Name="stackpost2">
-                                    <StackLayout Padding="10" x:Name="stackpost">
-                                        <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="EndAndExpand">
+                                    <ListView
+                                        HasUnevenRows="True"
+                                        ItemsSource="{Binding PostData}">
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <ViewCell>
+                                                    <StackLayout Padding="10" x:Name="stackpost">
+                                                        <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="EndAndExpand">
 
-                                            <Label Text="محسن شموشکی" TextColor="Black" FontSize="Large" HorizontalOptions="EndAndExpand"/>
-                                            <Image Source="iconprofile.png" HorizontalOptions="EndAndExpand"/>
+                                                            <Label Text="{Binding ID}" TextColor="Black" FontSize="Large" HorizontalOptions="EndAndExpand"/>
+                                                            <Image Source="iconprofile.png" HorizontalOptions="EndAndExpand"/>
 
-                                        </StackLayout>
-                                        <Image Source="Body.png" VerticalOptions="StartAndExpand"
+                                                        </StackLayout>
+                                                        <Image Source="{Binding ImagePost}" VerticalOptions="StartAndExpand"
                                                                HorizontalOptions="CenterAndExpand"
                                                             />
-                                        <StackLayout VerticalOptions="StartAndExpand"
+                                                        <StackLayout VerticalOptions="StartAndExpand"
                                                                       Orientation="Horizontal"
                                                                      HorizontalOptions="StartAndExpand"
                                                                      Margin="5,0,0,0">
-                                            <Image Source="Like.png" HorizontalOptions="StartAndExpand">
+                                                            <Image Source="Like.png" HorizontalOptions="StartAndExpand">
 
-                                            </Image>
-                                            <Image VerticalOptions="StartAndExpand" Source="Comment.png">
+                                                            </Image>
+                                                            <Image VerticalOptions="StartAndExpand" Source="Comment.png">
 
-                                            </Image>
+                                                            </Image>
 
-                                        </StackLayout>
-                                        <Label 
+                                                        </StackLayout>
+                                                        <Label 
                                             x:Name="mozoe1"
                                             VerticalOptions="StartAndExpand"
                                                                HorizontalOptions="EndAndExpand"
@@ -51,8 +61,15 @@
                                             
                                                                TextColor="Black"
                                                                FontSize="Large"
-                                                            />
-                                    </StackLayout>
+    
+                                                        />
+                                                    </StackLayout>
+                                                </ViewCell>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                       
+                                    </ListView>
+                                   
 
 
 

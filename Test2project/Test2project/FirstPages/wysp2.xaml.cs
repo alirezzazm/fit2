@@ -35,7 +35,7 @@ namespace Test2project.FirstPages
 
             
         }
-        public void MainPage(object sender, EventArgs e)
+        public async  void MainPage(object sender, EventArgs e)
         {
             Person person = App.Database.GetPeopleAsync().Result;
 
@@ -48,7 +48,7 @@ namespace Test2project.FirstPages
                 person.Height = qad.Text;
                 person.Weight = vazn.Text;
                 person.Image = file;
-                App.Database.UpdatePersonAsync(person);
+               await App.Database.UpdatePersonAsync(person);
 
                 
 

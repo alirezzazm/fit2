@@ -17,6 +17,7 @@ namespace Test2project.ViewModels
         private List<PostData> _postdata;
         private readonly string propertyName;
         private DataServicePost _dataServicepost = new DataServicePost();
+       
 
         public PostData SelectedPost { get; set; }
 
@@ -31,13 +32,13 @@ namespace Test2project.ViewModels
         }
         public ICommand SendTodoCommand => new Command(async () =>
         {
-            // SelectedTodo.UpdatedAt = DateTime.UtcNow;
-            //await _dataServicepost.PostData(SelectedTodo);
+            SelectedPost.UpdatedAt = DateTime.UtcNow;
+            await _dataServicepost.PostPostData(SelectedPost);
         });
         public MainPostModel()
         {
-            //SelectedTodo = new PostData();
-            //GetPostData();
+            SelectedPost = new PostData();
+            GetPostData();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

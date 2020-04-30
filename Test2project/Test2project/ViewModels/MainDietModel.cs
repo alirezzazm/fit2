@@ -1,13 +1,13 @@
 ﻿using System;
 using Test2project.Models;
-
+using Test2project.DataService;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows.Input;
 using System.Threading.Tasks;
-using Test2project.DataService;
+
 using Xamarin.Forms;
 
 namespace Test2project.ViewModels
@@ -31,13 +31,13 @@ namespace Test2project.ViewModels
         }
         public ICommand SendTodoCommand => new Command(async () =>
         {
-            // SelectedTodo.UpdatedAt = DateTime.UtcNow;
-          //  await _dataServicediet.PostDietModels(SelectedTodo);
+            // SelectedPost.UpdatedAt = DateTime.UtcNow;
+             await _dataServicediet.PostDietModels(SelectedPost);
         });
         public MainDietModel()
         {
-         //   SelectedTodo = new DietModels();
-          //  GetDietModels();
+               SelectedPost = new DietModels();
+            GetPostData();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
