@@ -65,8 +65,15 @@
                     <Grid >
                         <Image
                             Source="BoxX.png" />
-                        <StackLayout>
-                            <forms1:ChartView x:Name="Chart1" HeightRequest="150"/>
+                        <StackLayout >
+                            <forms1:ChartView 
+                                x:Name="Chart1" 
+                                VerticalOptions="CenterAndExpand"
+                                HorizontalOptions="CenterAndExpand"
+                                WidthRequest="200"
+                                HeightRequest="200"
+                                             
+                                              />
                         </StackLayout>
                     </Grid>
                 </StackLayout>

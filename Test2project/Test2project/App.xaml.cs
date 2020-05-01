@@ -73,7 +73,7 @@ namespace Test2project
         {
             InitializeComponent();
 
-            MainPage = new Maps();
+            MainPage = new Pg1();
            
           
         }
