@@ -4,12 +4,17 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Test2project.Map.Maps">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="Test2project.Map.Maps"
+             xmlns:maps="clr-namespace:Syncfusion.SfMaps.XForms;assembly=Syncfusion.SfMaps.XForms">
+    <Grid x:Name="mainGrid">
+        <Grid.Resources>
+            <ResourceDictionary>
+                <DataTemplate x:Key="markerTemplate">
+                    <StackLayout IsClippedToBounds="false" HorizontalOptions="StartAndExpand" VerticalOptions="Center" HeightRequest="35">
+                        <Image Source="{Binding  ImageName}" Scale="1" Aspect="AspectFit " HorizontalOptions="StartAndExpand" VerticalOptions="Center"  HeightRequest="35" WidthRequest="25" />
+                    </StackLayout>
+                </DataTemplate>
+            </ResourceDictionary>
+        </Grid.Resources>
+    </Grid>
 </ContentPage>

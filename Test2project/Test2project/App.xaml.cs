@@ -14,6 +14,7 @@ using Test2project;
 using Xamarin.Forms.Xaml;
 using Test2project.Setting;
 using Test2project.Data;
+using Test2project.Map;
 
 namespace Test2project
 {
@@ -72,7 +73,7 @@ namespace Test2project
         {
             InitializeComponent();
 
-            MainPage = new WhatIsYourSexPage();
+            MainPage = new Maps();
            
           
         }
