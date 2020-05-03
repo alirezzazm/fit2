@@ -15,8 +15,15 @@ using Test2project.Models;
 using Test2project;
 using SQLite;
 using SQLitePCL;
+using SkiaSharp;
+using Microcharts;
+
+using Xamarin.Forms.Xaml;
 
 
+using Xamarin.Essentials;
+using Urho;
+using Urho.Forms;
 
 
 namespace Test2project
@@ -24,16 +31,52 @@ namespace Test2project
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(false)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage
     {
+        FaddyModels monkeyDo;
+        List<Microcharts.Entry> chart = new List<Microcharts.Entry>
+        {
+            new Microcharts.Entry(100)
+            {
+                Color=SKColor.Parse("#ff1493"),
+                Label="january",
+                ValueLabel="200"
+            },
+             new Microcharts.Entry(300)
+            {
+                Color=SKColor.Parse("#00bfff"),
+                Label="February",
+                ValueLabel="400"
+            },
+              new Microcharts.Entry(20)
+            {
+                Color=SKColor.Parse("#00ced1"),
+                Label="March",
+                ValueLabel="-100"
+            },
+
+
+        };
         public MainPage()
         {
-            
+          // Chart2.Chart = new LineChart { Entries = chart };
             
             InitializeComponent();
             //  On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
-           
-                     }
+
+            //خرسه
+            OrientationSensor.ReadingChanged += (sender, args) =>
+            {
+                System.Numerics.Quaternion q = args.Reading.Orientation;
+
+                // Convert to Urho Quaternion, and swap Y and Z values to 
+                //  convert from right-hand to left-hand coordinates.
+                monkeyDo.Orientation = new Quaternion(q.X, q.Z, q.Y, q.W);
+            };
+            //خرسه
+
+        }
         private bool isOpen = false;
         private async void Button_Clicked(object sender, EventArgs e)
         {
@@ -150,7 +193,7 @@ namespace Test2project
                 await ((Image)sender).ScaleTo(1, 50, Easing.SinIn);
 
                 Notif.IsVisible = false;
-               
+
             }
             else
             {
@@ -166,7 +209,7 @@ namespace Test2project
                 await ((Image)sender).ScaleTo(1, 50, Easing.Linear);
 
                 Notif.IsVisible = true;
-               
+
 
 
 
@@ -183,8 +226,35 @@ namespace Test2project
 
         protected override async void OnAppearing()
         {
+            //خرسه
+            base.OnAppearing();
 
-            var amc = await App.Database.GetPeopleAsync();
+            monkeyDo = await urhoSurface.Show<FaddyModels>(new ApplicationOptions(assetsFolder: "DataFaddyModels"));
+
+            try
+            {
+                OrientationSensor.Start(SensorSpeed.Default);
+            }
+            catch
+            {
+                Content = new Label
+                {
+                    Text = "Sorry, the OrientationSensor is not supported on this device.",
+                    VerticalOptions = LayoutOptions.Center,
+                    HorizontalTextAlignment = TextAlignment.Center,
+                    Margin = new Thickness(50)
+                };
+            }
+            //خرسه
+
+
+
+
+
+
+
+
+            //  var amc = await App.Database.GetPeopleAsync();
 
 
 
@@ -210,6 +280,15 @@ namespace Test2project
             //}
 
         }
+
+        //خرسه
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            OrientationSensor.Stop();
+            UrhoSurface.OnDestroy();
+        }
+        //خرسه
 
 
 

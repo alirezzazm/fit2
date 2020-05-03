@@ -25,6 +25,8 @@ namespace Test2project.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
+            Syncfusion.SfChart.XForms.iOS.Renderers.SfChartRenderer.Init();
+
             return base.FinishedLaunching(app, options);
         }
     }

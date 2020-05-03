@@ -12,11 +12,12 @@ using Xamarin.Forms;
 
 namespace Test2project.ViewModels
 {
-    public class MainDietModel : INotifyPropertyChanged
+    public class DietModelsViewModel : INotifyPropertyChanged
     {
         private List<DietModels> _dietmodels;
         private readonly string propertyNameDiet;
         private DataServiceDiet _dataServicediet = new DataServiceDiet();
+      
 
         public DietModels SelectedPost { get; set; }
 
@@ -34,7 +35,7 @@ namespace Test2project.ViewModels
             // SelectedPost.UpdatedAt = DateTime.UtcNow;
              await _dataServicediet.PostDietModels(SelectedPost);
         });
-        public MainDietModel()
+        public DietModelsViewModel()
         {
                SelectedPost = new DietModels();
             GetPostData();
@@ -49,7 +50,7 @@ namespace Test2project.ViewModels
 
         private async Task GetPostData()
         {
-
+            
 
             DietModels = await _dataServicediet.GetDietModels();
         }

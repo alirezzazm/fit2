@@ -45,7 +45,8 @@ namespace Test2project.Diet
         public Pg1()
         {
             InitializeComponent();
-            Chart1.Chart = new BarChart { Entries = entries };
+           Chart1.Chart = new BarChart { Entries = entries };
+           
         }
         public void NextPg2(object sender, EventArgs e)
         {
@@ -54,7 +55,7 @@ namespace Test2project.Diet
 
         private async void TapGestureRecognizer_TappedforDietPg1(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new MainPage());
+          await  Navigation.PushModalAsync(new MainPage());
            
         }
        

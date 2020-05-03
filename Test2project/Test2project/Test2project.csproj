@@ -19,8 +19,10 @@
     <PackageReference Include="SkiaSharp" Version="1.68.1.1" />
     <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.1.1" />
     <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
+    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="18.1.0.46" />
     <PackageReference Include="Syncfusion.Xamarin.SfMaps" Version="18.1.0.46" />
     <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="18.1.0.44" />
+    <PackageReference Include="UrhoSharp.Forms" Version="1.9.67" />
     <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
     <PackageReference Include="Xam.Plugin.TabView" Version="1.0.4" />
     <PackageReference Include="Xamarin.Forms" Version="4.5.0.617" />

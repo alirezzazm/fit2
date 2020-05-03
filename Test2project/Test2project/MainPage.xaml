@@ -2,15 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:tabview="clr-namespace:Xam.Plugin.TabView;assembly=Xam.Plugin.TabView"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"         
              xmlns:tabView="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
              mc:Ignorable="d"
              x:Class="Test2project.MainPage"
-              xmlns:ViewModels="clr-namespace:Test2project.ViewModels"
-             >
+              xmlns:ViewModels="clr-namespace:Test2project.ViewModels" 
+             xmlns:forms1="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms" 
+             xmlns:urho="clr-namespace:Urho.Forms;assembly=UrhoSharp.Forms"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms">
     <ContentPage.BindingContext>
-        <ViewModels:MainPostModel/>
+        <!--<ViewModels:MainPostModel/>-->
+        <ViewModels:ChartMainViewModel/>
     </ContentPage.BindingContext>
 
     <ContentPage.Content >
@@ -89,29 +91,31 @@
                         </StackLayout>
                     </tabView:SfTabItem.Content>
                 </tabView:SfTabItem>
+                
+                
                 <tabView:SfTabItem ImageSource="Profile2.png">
                     
                     <tabView:SfTabItem.Content>
-                        
-                        <ContentView>
+                        <StackLayout BackgroundColor="White">
+
                             <Grid>
-                               
+
                                 <StackLayout BackgroundColor="White">
-                                <StackLayout>
-                            <StackLayout VerticalOptions="StartAndExpand" Orientation="Horizontal" BackgroundColor="#18DCFF">
-                                        <StackLayout
+                                    <StackLayout>
+                                        <StackLayout VerticalOptions="StartAndExpand" Orientation="Horizontal" BackgroundColor="#18DCFF">
+                                            <StackLayout
                                             Margin="10"           
                            VerticalOptions="StartAndExpand" 
                            HorizontalOptions="StartAndExpand" 
                                             Orientation="Horizontal">
-                                            <Image Source="settings.png">
-                                                <Image.GestureRecognizers>
-                                                    <TapGestureRecognizer
+                                                <Image Source="settings.png">
+                                                    <Image.GestureRecognizers>
+                                                        <TapGestureRecognizer
                                                         NumberOfTapsRequired="1"
                                                         Tapped="Setting"/>
-                                                </Image.GestureRecognizers>
-                                              
-                                            </Image>
+                                                    </Image.GestureRecognizers>
+
+                                                </Image>
                                                 <Image Source="zang.png" >
                                                     <Image.GestureRecognizers>
                                                         <TapGestureRecognizer
@@ -121,65 +125,68 @@
                                                 </Image>
 
 
-                                        </StackLayout>
+                                            </StackLayout>
 
-                                        <StackLayout VerticalOptions="StartAndExpand" 
+                                            <StackLayout VerticalOptions="StartAndExpand" 
                            HorizontalOptions="EndAndExpand"
                                                      Orientation="Horizontal"
                                                      Margin="10">
-                                              <Grid   VerticalOptions="StartAndExpand" 
+                                                <Grid   VerticalOptions="StartAndExpand" 
                            HorizontalOptions="EndAndExpand">
-                                                <Grid.GestureRecognizers>
-                                                    <TapGestureRecognizer
+                                                    <Grid.GestureRecognizers>
+                                                        <TapGestureRecognizer
                                                         Tapped="Profile"
                                                         NumberOfTapsRequired="1"/>
-                                                </Grid.GestureRecognizers>
+                                                    </Grid.GestureRecognizers>
 
-                                            <Image 
+                                                    <Image 
                       
                                               Source="Box2.png"
                                                />
 
-                                            <Label
+                                                    <Label
                                                 Text="محسن شموشکی"
                                                 FontSize="Large"
                                                 VerticalOptions="Center"
                                                 HorizontalOptions="Center"/>
-                                        </Grid>
+                                                </Grid>
 
-                                        <Grid   VerticalOptions="StartAndExpand" 
+                                                <Grid   VerticalOptions="StartAndExpand" 
                                         HorizontalOptions="EndAndExpand">
-                                            
-                                             <Image 
+
+                                                    <Image 
                       
                                                  Source="boxsmall.png"
                                                   />
 
-                                            <Label
+                                                    <Label
                                                 Text="+15"
                                                 FontSize="Large"
                                                 VerticalOptions="Center"
                                                 HorizontalOptions="Center"/>
-                                        </Grid>
-                           
+                                                </Grid>
+
+                                            </StackLayout>
+
+
                                         </StackLayout>
-                                      
 
 
 
-                            </StackLayout>
-                                    <StackLayout BackgroundColor="White">
-                                        
-                                        
-                                        
-                                          
-                                        
-                                        
-                           
-                                        
+
+
                                     </StackLayout>
+
+
+                                    <urho:UrhoSurface 
+                                              
+                                        x:Name="urhoSurface" 
+                                              
+                                        HeightRequest="500"
+                                           
+                                        WidthRequest="500" />
+
                                 </StackLayout>
-                          </StackLayout>
                                 <Grid VerticalOptions="StartAndExpand"
                                        Margin="0,45,30,0"
                                        HorizontalOptions="CenterAndExpand">
@@ -189,24 +196,76 @@
                                       
                                        HorizontalOptions="CenterAndExpand" 
                                        IsVisible="False">
-                                   
 
-                                </Image>
+
+                                    </Image>
                                 </Grid>
-                                
+
                             </Grid>
-                        </ContentView>
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                        </StackLayout>
+                       
+                          
+                           
+                           
+                       
                        
                     </tabView:SfTabItem.Content>
                 </tabView:SfTabItem>
+                
+                
+                
                 <tabView:SfTabItem ImageSource="notepad2.png">
-                    <tabView:SfTabItem.BindingContext>
+
+                    <tabView:SfTabItem.Content>
                         <StackLayout BackgroundColor="White">
-                            <Button Text="s" WidthRequest="50"
-                BackgroundColor="Black"/>
+                            
+                       
+                        <StackLayout 
+                            x:Name="Chart"
+                            
+                            HorizontalOptions="FillAndExpand" 
+                            
+                            VerticalOptions="FillAndExpand"
+                                     >
+                            
+                            
+                                <chart:SfChart>
+                                    <chart:SfChart.PrimaryAxis>
+                                        <chart:CategoryAxis/>
+                                    </chart:SfChart.PrimaryAxis>
+
+                                    <chart:SfChart.SecondaryAxis>
+                                        <chart:NumericalAxis/>
+                                    </chart:SfChart.SecondaryAxis>
+                                    
+                                </chart:SfChart>
+                            
+                            
+                           
+
+                            </StackLayout>
+
+
                         </StackLayout>
-                    </tabView:SfTabItem.BindingContext>
+
+                    </tabView:SfTabItem.Content>
+                       
+                   
                 </tabView:SfTabItem>
+                
+                
+                
             </tabView:SfTabView>
 
 

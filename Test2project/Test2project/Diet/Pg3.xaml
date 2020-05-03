@@ -3,11 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:ViewModels="clr-namespace:Test2project.Models"
+             xmlns:ViewModels="clr-namespace:Test2project.ViewModels"
              mc:Ignorable="d"
              x:Class="Test2project.Diet.Pg3">
     <ContentPage.BindingContext>
-        <ViewModels:DietModels/>
+        <ViewModels:DietModelsViewModel/>
     </ContentPage.BindingContext>
     <StackLayout>
          <Grid>
